@@ -1,4 +1,4 @@
-var hours = [
+var availability = [
     {"gate": 1, "day":1, "time":1, "availability":"closed"},{"gate": 1, "day":1, "time":2, "availability":"closed"},{"gate": 1, "day":1, "time":3, "availability":"closed"},{"gate": 1, "day":1, "time":4, "availability":"closed"},{"gate": 1, "day":1, "time":5, "availability":"closed"},{"gate": 1, "day":1, "time":6, "availability":"closed"},{"gate": 1, "day":1, "time":7, "availability":"closed"},{"gate": 1, "day":1, "time":8, "availability":"closed"},{"gate": 1, "day":1, "time":9, "availability":"closed"},{"gate": 1, "day":1, "time":10, "availability":"closed"},{"gate": 1, "day":1, "time":11, "availability":"closed"},{"gate": 1, "day":1, "time":12, "availability":"closed"},{"gate": 1, "day":1, "time":13, "availability":"open"},{"gate": 1, "day":1, "time":14, "availability":"open"},{"gate": 1, "day":1, "time":15, "availability":"open"},{"gate": 1, "day":1, "time":16, "availability":"open"},{"gate": 1, "day":1, "time":17, "availability":"open"},{"gate": 1, "day":1, "time":18, "availability":"open"},{"gate": 1, "day":1, "time":19, "availability":"open"},{"gate": 1, "day":1, "time":20, "availability":"open"},{"gate": 1, "day":1, "time":21, "availability":"open"},{"gate": 1, "day":1, "time":22, "availability":"open"},{"gate": 1, "day":1, "time":23, "availability":"open"},{"gate": 1, "day":1, "time":24, "availability":"open"},{"gate": 1, "day":1, "time":25, "availability":"open"},{"gate": 1, "day":1, "time":26, "availability":"open"},{"gate": 1, "day":1, "time":27, "availability":"open"},{"gate": 1, "day":1, "time":28, "availability":"open"},{"gate": 1, "day":1, "time":29, "availability":"open"},{"gate":1, "day":1, "time":30, "availability":"open"},{"gate": 1, "day":1, "time":31, "availability":"open"},{"gate": 1, "day":1, "time":32, "availability":"open"},{"gate": 1, "day":1, "time":33, "availability":"open"},{"gate": 1, "day":1, "time":34, "availability":"open"},{"gate": 1, "day":1, "time":35, "availability":"open"},{"gate": 1, "day":1, "time":36, "availability":"open"},{"gate": 1, "day":1, "time":37, "availability":"open"},{"gate": 1, "day":1, "time":38, "availability":"closed"},{"gate": 1, "day":1, "time":39, "availability":"closed"},{"gate":1, "day":1, "time":40, "availability":"closed"},{"gate": 1, "day":1, "time":41, "availability":"closed"},{"gate": 1, "day":1, "time":42, "availability":"closed"},{"gate": 1, "day":1, "time":43, "availability":"closed"},{"gate": 1, "day":1, "time":44, "availability":"closed"},{"gate": 1, "day":1, "time":45, "availability":"closed"},{"gate": 1, "day":1, "time":46, "availability":"closed"},{"gate": 1, "day":1, "time":47, "availability":"closed"},{"gate": 1, "day":1, "time":48, "availability":"closed"},
     {"gate": 1, "day":2, "time":1, "availability":"closed"},{"gate": 1, "day":2, "time":2, "availability":"closed"},{"gate": 1, "day":2, "time":3, "availability":"closed"},{"gate": 1, "day":2, "time":4, "availability":"closed"},{"gate": 1, "day":2, "time":5, "availability":"closed"},{"gate": 1, "day":2, "time":6, "availability":"closed"},{"gate": 1, "day":2, "time":7, "availability":"closed"},{"gate": 1, "day":2, "time":8, "availability":"closed"},{"gate": 1, "day":2, "time":9, "availability":"closed"},{"gate": 1, "day":2, "time":10, "availability":"closed"},{"gate": 1, "day":2, "time":11, "availability":"closed"},{"gate": 1, "day":2, "time":12, "availability":"closed"},{"gate": 1, "day":2, "time":13, "availability":"open"},{"gate": 1, "day":2, "time":14, "availability":"open"},{"gate": 1, "day":2, "time":15, "availability":"open"},{"gate": 1, "day":2, "time":16, "availability":"open"},{"gate": 1, "day":2, "time":17, "availability":"open"},{"gate": 1, "day":2, "time":18, "availability":"open"},{"gate": 1, "day":2, "time":19, "availability":"open"},{"gate": 1, "day":2, "time":20, "availability":"open"},{"gate": 1, "day":2, "time":21, "availability":"open"},{"gate": 1, "day":2, "time":22, "availability":"open"},{"gate": 1, "day":2, "time":23, "availability":"open"},{"gate": 1, "day":2, "time":24, "availability":"open"},{"gate": 1, "day":2, "time":25, "availability":"open"},{"gate": 1, "day":2, "time":26, "availability":"open"},{"gate": 1, "day":2, "time":27, "availability":"open"},{"gate": 1, "day":2, "time":28, "availability":"open"},{"gate": 1, "day":2, "time":29, "availability":"open"},{"gate":1, "day":2, "time":30, "availability":"open"},{"gate": 1, "day":2, "time":31, "availability":"open"},{"gate": 1, "day":2, "time":32, "availability":"open"},{"gate": 1, "day":2, "time":33, "availability":"open"},{"gate": 1, "day":2, "time":34, "availability":"open"},{"gate": 1, "day":2, "time":35, "availability":"open"},{"gate": 1, "day":2, "time":36, "availability":"open"},{"gate": 1, "day":2, "time":37, "availability":"open"},{"gate": 1, "day":2, "time":38, "availability":"closed"},{"gate": 1, "day":2, "time":39, "availability":"closed"},{"gate":1, "day":2, "time":40, "availability":"closed"},{"gate": 1, "day":2, "time":41, "availability":"closed"},{"gate": 1, "day":2, "time":42, "availability":"closed"},{"gate": 1, "day":2, "time":43, "availability":"closed"},{"gate": 1, "day":2, "time":44, "availability":"closed"},{"gate": 1, "day":2, "time":45, "availability":"closed"},{"gate": 1, "day":2, "time":46, "availability":"closed"},{"gate": 1, "day":2, "time":47, "availability":"closed"},{"gate": 1, "day":2, "time":48, "availability":"closed"},
     {"gate": 1, "day":3, "time":1, "availability":"closed"},{"gate": 1, "day":3, "time":2, "availability":"closed"},{"gate": 1, "day":3, "time":3, "availability":"closed"},{"gate": 1, "day":3, "time":4, "availability":"closed"},{"gate": 1, "day":3, "time":5, "availability":"closed"},{"gate": 1, "day":3, "time":6, "availability":"closed"},{"gate": 1, "day":3, "time":7, "availability":"closed"},{"gate": 1, "day":3, "time":8, "availability":"closed"},{"gate": 1, "day":3, "time":9, "availability":"closed"},{"gate": 1, "day":3, "time":10, "availability":"closed"},{"gate": 1, "day":3, "time":11, "availability":"closed"},{"gate": 1, "day":3, "time":12, "availability":"closed"},{"gate": 1, "day":3, "time":13, "availability":"open"},{"gate": 1, "day":3, "time":14, "availability":"open"},{"gate": 1, "day":3, "time":15, "availability":"open"},{"gate": 1, "day":3, "time":16, "availability":"open"},{"gate": 1, "day":3, "time":17, "availability":"open"},{"gate": 1, "day":3, "time":18, "availability":"open"},{"gate": 1, "day":3, "time":19, "availability":"open"},{"gate": 1, "day":3, "time":20, "availability":"open"},{"gate": 1, "day":3, "time":21, "availability":"open"},{"gate": 1, "day":3, "time":22, "availability":"open"},{"gate": 1, "day":3, "time":23, "availability":"open"},{"gate": 1, "day":3, "time":24, "availability":"open"},{"gate": 1, "day":3, "time":25, "availability":"open"},{"gate": 1, "day":3, "time":26, "availability":"open"},{"gate": 1, "day":3, "time":27, "availability":"open"},{"gate": 1, "day":3, "time":28, "availability":"open"},{"gate": 1, "day":3, "time":29, "availability":"open"},{"gate":1, "day":3, "time":30, "availability":"open"},{"gate": 1, "day":3, "time":31, "availability":"open"},{"gate": 1, "day":3, "time":32, "availability":"open"},{"gate": 1, "day":3, "time":33, "availability":"open"},{"gate": 1, "day":3, "time":34, "availability":"open"},{"gate": 1, "day":3, "time":35, "availability":"open"},{"gate": 1, "day":3, "time":36, "availability":"open"},{"gate": 1, "day":3, "time":37, "availability":"open"},{"gate": 1, "day":3, "time":38, "availability":"closed"},{"gate": 1, "day":3, "time":39, "availability":"closed"},{"gate":1, "day":3, "time":40, "availability":"closed"},{"gate": 1, "day":3, "time":41, "availability":"closed"},{"gate": 1, "day":3, "time":42, "availability":"closed"},{"gate": 1, "day":3, "time":43, "availability":"closed"},{"gate": 1, "day":3, "time":44, "availability":"closed"},{"gate": 1, "day":3, "time":45, "availability":"closed"},{"gate": 1, "day":3, "time":46, "availability":"closed"},{"gate": 1, "day":3, "time":47, "availability":"closed"},{"gate": 1, "day":3, "time":48, "availability":"closed"},
@@ -66,6 +66,49 @@ var hours = [
     {"gate":8, "day":7, "time":1, "availability":"closed"},{"gate":8, "day":7, "time":2, "availability":"closed"},{"gate":8, "day":7, "time":3, "availability":"closed"},{"gate":8, "day":7, "time":4, "availability":"closed"},{"gate":8, "day":7, "time":5, "availability":"closed"},{"gate":8, "day":7, "time":6, "availability":"closed"},{"gate":8, "day":7, "time":7, "availability":"closed"},{"gate":8, "day":7, "time":8, "availability":"closed"},{"gate":8, "day":7, "time":9, "availability":"closed"},{"gate":8, "day":7, "time":10, "availability":"closed"},{"gate":8, "day":7, "time":11, "availability":"closed"},{"gate":8, "day":7, "time":12, "availability":"closed"},{"gate":8, "day":7, "time":13, "availability":"closed"},{"gate":8, "day":7, "time":14, "availability":"closed"},{"gate":8, "day":7, "time":15, "availability":"closed"},{"gate":8, "day":7, "time":16, "availability":"closed"},{"gate":8, "day":7, "time":17, "availability":"closed"},{"gate":8, "day":7, "time":18, "availability":"closed"},{"gate":8, "day":7, "time":19, "availability":"closed"},{"gate":8, "day":7, "time":20, "availability":"closed"},{"gate":8, "day":7, "time":21, "availability":"closed"},{"gate":8, "day":7, "time":22, "availability":"closed"},{"gate":8, "day":7, "time":23, "availability":"closed"},{"gate":8, "day":7, "time":24, "availability":"closed"},{"gate":8, "day":7, "time":25, "availability":"closed"},{"gate":8, "day":7, "time":26, "availability":"closed"},{"gate":8, "day":7, "time":27, "availability":"closed"},{"gate":8, "day":7, "time":28, "availability":"closed"},{"gate":8, "day":7, "time":29, "availability":"closed"},{"gate":8, "day":7, "time":30, "availability":"closed"},{"gate":8, "day":7, "time":31, "availability":"closed"},{"gate":8, "day":7, "time":32, "availability":"closed"},{"gate":8, "day":7, "time":33, "availability":"closed"},{"gate":8, "day":7, "time":34, "availability":"closed"},{"gate":8, "day":7, "time":35, "availability":"closed"},{"gate":8, "day":7, "time":36, "availability":"closed"},{"gate":8, "day":7, "time":37, "availability":"closed"},{"gate":8, "day":7, "time":38, "availability":"closed"},{"gate":8, "day":7, "time":39, "availability":"closed"},{"gate":8, "day":7, "time":40, "availability":"closed"},{"gate":8, "day":7, "time":41, "availability":"closed"},{"gate":8, "day":7, "time":42, "availability":"closed"},{"gate":8, "day":7, "time":43, "availability":"closed"},{"gate":8, "day":7, "time":44, "availability":"closed"},{"gate":8, "day":7, "time":45, "availability":"closed"},{"gate":8, "day":7, "time":46, "availability":"closed"},{"gate":8, "day":7, "time":47, "availability":"closed"},{"gate":8, "day":7, "time":48, "availability":"closed"},
 ];
 
+var newDate = new Date(),
+    hours = newDate.getHours(),
+    minutes = Math.floor(newDate.getMinutes() * 5/3),
+    show = +(hours +""+ ("0" + minutes).slice(-2));
+
+var sca = d3.scale.quantile()
+    .domain([0,2398])
+    .range([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48]);
+currentIndex = sca(show);
+console.log('CI: ' + currentIndex);
+
+var arr = [],
+    index = 0;
+availability.forEach(function(d, i) {
+    if(d.time + currentIndex > 48) {
+        return;
+    }
+    else if(d.time + currentIndex > 36) {
+        //console.log(d.time);
+        //console.log(availability[i + currentIndex - 36]);
+        arr.push(d);
+    }
+    else {
+        arr.splice(index, 0, d);
+        index++;
+    }
+
+})
+
+
+/*while(i < availability.length) {
+    if(i < 36) {
+        arr.push(availability[i]);
+    }
+    else {
+        arr.push(availability[i - 36]);
+    }
+    i++;
+}*/
+
+console.log(arr);
+
+
 
 
 var margin = { top: 50, right: 0, bottom: 100, left: 30 },
@@ -77,6 +120,14 @@ var margin = { top: 50, right: 0, bottom: 100, left: 30 },
     gates = ["#1", "#2", "#2A", "#2B", "#3", "#4", "#5", "#5"],
     times = ["12:00a", "12:30a", "1:00a", "1:30a", "2:00a", "2:30a", "3:00a", "3:30a", "4:00a", "4:30a", "5:00a", "5:30a", "6:00a", "6:30a", "7:00a", "7:30a", "8:00a", "8:30a", "9:00a", "9:30a", "10:00a", "10:30a", "11:00a", "11:30a",
             "12:00p", "12:30p", "1:00p", "1:30p", "2:00p", "2:30p", "3:00p", "3:30p", "4:00p", "4:30p", "5:00p", "5:30p", "6:00p", "6:30p", "7:00p", "7:30p", "8:00p", "8:30p", "9:00p", "9:30p", "10:00p", "10:30p", "11:00p", "11:30p" ];
+
+
+
+
+
+
+
+
 
 var svg = d3.select("#chart").append("svg")
     .attr("width", width + margin.left + margin.right + 10000)
@@ -127,10 +178,6 @@ var heatmapChart = function(data) {
             .append("rect")
         .attr("x", function(d) { return timeFunction(d) * gridSize; })
         .attr("y", function(d) {
-            console.log(d.gate-1);
-            if(d.gate-1 == 0) {
-                console.log(d.gate +":"+ d.day +":"+d.time);
-            }
             return (d.gate - 1) * gridSize;
         })
         .attr("rx", 4)
@@ -151,4 +198,36 @@ var heatmapChart = function(data) {
 
 
 // INITIATE HEATMAP CHART - pass JSON
-heatmapChart(hours);
+heatmapChart(availability);
+
+
+/*
+newData = data.filter(function(d) {
+    //get just *12 tiles of the data that corresponds to the current time.
+    //if(Date.now()/MATH > ( 48 - tileNum[12?] )) { //WRONG
+    if(d.
+
+    return true;
+});
+
+
+
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
