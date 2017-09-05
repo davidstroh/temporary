@@ -74,16 +74,18 @@ var newDate = new Date(),
 var sca = d3.scale.quantile()
     .domain([0,2398])
     .range([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48]);
-currentIndex = sca(show);
-console.log('CI: ' + currentIndex);
+currentTime = sca(show);
+console.log('Full T: ' + show);
+console.log('CT: ' + currentTime);
+console.log('invert: ' + sca.invert(currentTime));
 
 var arr = [],
     index = 0;
 availability.forEach(function(d, i) {
-    if(d.time + currentIndex > 48) {
+    if(d.time + currentTime > 48) {
         return;
     }
-    else if(d.time + currentIndex > 36) {
+    else if(d.time + currentTime > 36) {
         //console.log(d.time);
         //console.log(availability[i + currentIndex - 36]);
         arr.push(d);
@@ -92,128 +94,41 @@ availability.forEach(function(d, i) {
         arr.splice(index, 0, d);
         index++;
     }
-
-})
-
-
-/**
- * Returns a sliding window over data
- * with lenth len, starting from cur
- * repeating data infinitely to fit the window
- */
-function infiniteSlidingWindow(data, cur, len) {
-    var win = [],
-        num = data.length,
-        numVisible = len;
-    // A negative cur is the same as num - abs(cur)
-    if (cur < 0) {
-        cur = num + cur;
-    }
-    // Now keep adding items until we have enough
-    var index = 0;
-
-    //console.log(0?"zero":win.length)
-    while (win.length < numVisible) {
-        var first = (win.length?0:Math.abs(cur)%num),
-            missing = numVisible - win.length,
-            last = Math.min(first + missing, num);
-        win = win.concat(data.slice(first, last));
-        //console.log(++index);
-        //console.log(win);
-    }
-    return win;
-}
-
-/* Tests */
-var data = [0,1,2,3,4,5,6,7,8,9];
-var result;
-
-result = infiniteSlidingWindow(data, 6, 17);
-//console.log(result);
+});
 
 
-var incrementNum = 48 * 7;
+var incrementNum = 48 * 7; // 336 = (# of half-hour increments in a day) * (# of days in week)
 function test(data, cur, numVisible) {
-    var win=[];
+    var win=[],
+    dataColNum = data.length / incrementNum; // 8, in this case
 
     if(cur < 0) {
       cur = incrementNum + cur;
     }
 
-    while (win.length < numVisible) {
+    while (win.length < numVisible*dataColNum) {
         var first = (win.length ? 0 : Math.abs(cur)%incrementNum),
-            missing = numVisible - win.length,
-            dataColNum = data.length / incrementNum,
-            //winColNum = Math.floor(win.length / dataColNum),
+            missing = numVisible - (win.length / dataColNum)
             last = Math.min(first + missing, incrementNum)
             i = first;
         while (i < last) {
           var j = 0;
-              //winColNum = Math.floor(win.length / dataColNum);
           //console.log(i +' : '+ winColNum +' : '+ j)
           while (j < dataColNum) {
             winColNum = Math.floor(win.length / dataColNum);
-            console.log(i +' : '+ winColNum +' : '+ j)
-            var ind = (win.length > dataColNum ? winColNum * (j+1) : j);
-            win.splice(ind, 0, data[i+ (48*j)]);
+            // do I still need the tertiary statement???
+            var ind = (win.length >= dataColNum ? (winColNum+1) * (j+1) -1 : j);
+            win.splice(ind, 0, data[i+ (incrementNum*j)]);
             j++;
-            //winColNum = Math.floor(win.length / dataColNum);
           }
           i++;
-        }//console.log(win.length +" : "+ numVisible);
-        //break;
+        }
     }
-
+    console.log(win.length+" ? "+numVisible*dataColNum);
     return win;
 }
 
-console.log(test(availability, 0, 24));
-
-
-
-
-
-/*function test(data, first, last) {
-  var arr = [],
-  numVisible = last - first,
-  i = first,
-  rowInd = 1;
-
-  while( i < 7*8*last ) {
-
-    while ( i < last + (48 * rowInd) ) {
-      console.log(numVisible*rowInd);
-      arr.splice( numVisible*rowInd - numVisible%, 0, data[i]);
-      i++;
-    }
-
-    i = 10000000000000;//first + (48 * rowInd);
-  }
-
-  return arr;
-}*/
-
-//var data = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90];
-//console.log(test(data, 3, 6));
-
-
-
-
-
-
-/*while(i < availability.length) {
-    if(i < 36) {
-        arr.push(availability[i]);
-    }
-    else {
-        arr.push(availability[i - 36]);
-    }
-    i++;
-}*/
-
-//console.log(arr);
-
-
+console.log(test(availability, currentTime, 12));
 
 
 var margin = { top: 50, right: 0, bottom: 100, left: 30 },
@@ -225,13 +140,6 @@ var margin = { top: 50, right: 0, bottom: 100, left: 30 },
     gates = ["#1", "#2", "#2A", "#2B", "#3", "#4", "#5", "#5"],
     times = ["12:00a", "12:30a", "1:00a", "1:30a", "2:00a", "2:30a", "3:00a", "3:30a", "4:00a", "4:30a", "5:00a", "5:30a", "6:00a", "6:30a", "7:00a", "7:30a", "8:00a", "8:30a", "9:00a", "9:30a", "10:00a", "10:30a", "11:00a", "11:30a",
             "12:00p", "12:30p", "1:00p", "1:30p", "2:00p", "2:30p", "3:00p", "3:30p", "4:00p", "4:30p", "5:00p", "5:30p", "6:00p", "6:30p", "7:00p", "7:30p", "8:00p", "8:30p", "9:00p", "9:30p", "10:00p", "10:30p", "11:00p", "11:30p" ];
-
-
-
-
-
-
-
 
 
 var svg = d3.select("#chart").append("svg")
