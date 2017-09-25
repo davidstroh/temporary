@@ -1,3 +1,7 @@
+body {
+  background-color: #001145;
+}
+
 rect.bordered {
   stroke: #E6E6E6;
   stroke-width:2px;
@@ -6,13 +10,60 @@ rect.bordered {
 text.mono {
   font-size: 9pt;
   font-family: Consolas, courier;
-  fill: #aaa;
+  fill: white;
 }
 
-text.axis-workweek {
-  fill: #000;
+text.axis-workgate {
+  fill: white;
 }
 
 text.axis-worktime {
-  fill: #000;
+  fill: white;
+}
+
+
+
+
+
+
+#rtChart2 .axis {
+    stroke-width: 1;
+}
+
+#rtChart2 .axis .tick line {
+    stroke: white;
+}
+
+#rtChart2 .axis .tick text {
+    fill: white;
+    font-size: 0.7em;
+}
+
+#rtChart2 .group {
+    fill: none;
+    stroke: black;
+    stroke-width: 1.5;
+}
+
+
+
+
+
+
+
+
+#graph {
+  fill: white;
+  width: 960px;
+  height: 480px;
+}
+
+.line {
+  fill: white;
+  stroke: black;
+}
+
+text {
+  fill: white;
+  font-size: 0.5rem;
 }

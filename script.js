@@ -74,10 +74,8 @@ var newDate = new Date(),
 var sca = d3.scale.quantile()
     .domain([0,2398])
     .range([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48]);
-currentTime = sca(show);
-console.log('Full T: ' + show);
-console.log('CT: ' + currentTime);
-console.log('invert: ' + sca.invert(currentTime));
+currentTime = sca(show) - 1; // But why?
+
 
 var arr = [],
     index = 0;
@@ -86,8 +84,6 @@ availability.forEach(function(d, i) {
         return;
     }
     else if(d.time + currentTime > 36) {
-        //console.log(d.time);
-        //console.log(availability[i + currentIndex - 36]);
         arr.push(d);
     }
     else {
@@ -98,7 +94,8 @@ availability.forEach(function(d, i) {
 
 
 var incrementNum = 48 * 7; // 336 = (# of half-hour increments in a day) * (# of days in week)
-function test(data, cur, numVisible) {
+
+function windowFunction(data, cur, numVisible) {
     var win=[],
     dataColNum = data.length / incrementNum; // 8, in this case
 
@@ -124,41 +121,58 @@ function test(data, cur, numVisible) {
           i++;
         }
     }
-    console.log(win.length+" ? "+numVisible*dataColNum);
     return win;
 }
 
-console.log(test(availability, currentTime, 12));
+
+function keyFunction(d){
+    return d.gate + '-' + d.day + '-' + d.time;
+}
+
+//console.log(windowFunction(availability, currentTime, 12));
+//var windo = windowFunction(availability, currentTime, 12);
 
 
 var margin = { top: 50, right: 0, bottom: 100, left: 30 },
     width = 960 - margin.left - margin.right,
-    height = 430 - margin.top - margin.bottom,
-    gridSize = Math.floor(width / 48),
-    colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"], // alternatively colorbrewer.YlGnBu[9]
-    days = ["1", "2", "2a", "2b", "3", "4", "5", "6"],
-    gates = ["#1", "#2", "#2A", "#2B", "#3", "#4", "#5", "#5"],
+    height = 430 - margin.top - margin.bottom + 1000,
+    tileSize = Math.floor(width / 23), //48),
+    gridPadding = 6,
+    gridSize = tileSize + gridPadding,
+    //colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"], // alternatively colorbrewer.YlGnBu[9]
+    gates = ["#1", "#2", "#2A", "#2B", "#3", "#4", "#5", "#6"],
     times = ["12:00a", "12:30a", "1:00a", "1:30a", "2:00a", "2:30a", "3:00a", "3:30a", "4:00a", "4:30a", "5:00a", "5:30a", "6:00a", "6:30a", "7:00a", "7:30a", "8:00a", "8:30a", "9:00a", "9:30a", "10:00a", "10:30a", "11:00a", "11:30a",
             "12:00p", "12:30p", "1:00p", "1:30p", "2:00p", "2:30p", "3:00p", "3:30p", "4:00p", "4:30p", "5:00p", "5:30p", "6:00p", "6:30p", "7:00p", "7:30p", "8:00p", "8:30p", "9:00p", "9:30p", "10:00p", "10:30p", "11:00p", "11:30p" ];
 
 
+
+//console.log('Full T: ' + show);
+//console.log('CT: ' + currentTime);
+//console.log('invert: ' + sca.invert(currentTime));
+//console.log(times[currentTime-1]);
+
+
+
+
+
 var svg = d3.select("#chart").append("svg")
-    .attr("width", width + margin.left + margin.right + 10000)
+    .attr("width", (width * 2) + margin.left + margin.right + 15000)
     .attr("height", height + margin.top + margin.bottom)
     .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-var dayLabels = svg.selectAll(".dayLabel")
-    .data(days)
+var gateLabels = svg.selectAll(".gateLabel")
+    .data(gates)
     .enter().append("text")
     .text(function (d) { return d; })
     .attr("x", 0)
     .attr("y", function (d, i) { return i * gridSize; })
     .style("text-anchor", "end")
     .attr("transform", "translate(-6," + gridSize / 1.5 + ")")
-    //.attr("class", function (d, i) { return ((i >= 0 && i <= 4) ? "dayLabel mono axis axis-workweek" : "dayLabel mono axis"); });
-    .attr("class", function (d, i) { return "dayLabel mono axis axis-workweek"; });
+    //.attr("class", function (d, i) { return ((i >= 0 && i <= 4) ? "gateLabel mono axis axis-gate" : "gateLabel mono axis"); });
+    .attr("class", function (d, i) { return "gateLabel mono axis axis-workgate"; });
 
+/*/ apply time labels
 var timeLabels = svg.selectAll(".timeLabel")
     .data(times)
     .enter().append("text")
@@ -169,61 +183,494 @@ var timeLabels = svg.selectAll(".timeLabel")
     .attr("transform", "translate(" + gridSize / 2 + ", -6)")
     //Perhaps change the brightness of letters to brightness of sky
     //.attr("class", function(d, i) { return ((i >= 7 && i <= 16) ? "timeLabel mono axis axis-worktime" : "timeLabel mono axis"); });
-    .attr("class", function(d, i) { return "timeLabel mono axis axis-worktime"; });
+    .attr("class", function(d, i) { return "timeLabel mono axis axis-worktime"; });/**/
+
+
+
+
+
+
+
+
+
+
+//USEFUL? ENDALL
+    function endall(transition, callback) {
+      console.log("heya")
+        if (typeof callback !== "function") throw new Error("Wrong callback in endall");
+        if (transition.size() === 0) { callback() }
+        var n = 0;
+        transition
+            .each(function() { ++n; })
+            .each("end", function() {if (!--n) callback.apply(this, arguments); });
+      }
 
 
 
 // DEFINE HEATMAP CHART
-var heatmapChart = function(data) {
+var heatmapChart = function(data, tick) {
 
     var availScale = d3.scale.ordinal()
         .domain(['closed', 'outbound', 'open'])
-        .range(['red', 'purple', 'green']);
+        .range(['#E74826', '#907EA3', '#11d7a0']);
 
-    timeFunction = function(d) { return ( ((d.day-1) * 48) + d.time ); }
+    // get total amount to transform tile's x cordinate
+    // by aggregating all the previous days times and add the current time up to that point
+    timeFunction = function(d) { return ( ((d.day-1) * 48) + d.time - 1); } // subtract from total number of day/times?
+
+    var max = d3.max(data, function(d) { return timeFunction(d); }),
+        // i%12 == 0
+        relativeMin = timeFunction(data[0]),
+        range = max - relativeMin,
+        numVisible = data.length / gates.length;
+
+    var windowTransFunct = function(tFD) { return (tFD - relativeMin > -1 ? tFD - relativeMin : tFD + 1 + range); }
+
 
     var tiles = svg.selectAll(".time")
-        .data(data);//, function(d) { console.log(d); return d.gate+':'+timeFunction(d); });
+        .data(data,keyFunction);//, function(d) { console.log(d); return d.gate+':'+timeFunction(d); });
 
     tiles.append("title");
 
     tiles.enter()
             .append("rect")
-        .attr("x", function(d) { return timeFunction(d) * gridSize; })
-        .attr("y", function(d) {
-            return (d.gate - 1) * gridSize;
+        .attr("x", function(d) {
+          //console.log("HEL "+ (tFD - relativeMin))
+          var result = windowTransFunct(timeFunction(d));
+          //console.log(result);
+          return result * gridSize;
         })
-        .attr("rx", 4)
-        .attr("ry", 4)
+        .attr("y", function(d) { return (d.gate - 1) * gridSize; })
+        .attr("rx", 8)
+        .attr("ry", 8)
         .attr("class", "time bordered")
-        .attr("width", gridSize)
-        .attr("height", gridSize)
-        .style("fill", 'red');
+        .attr("width", tileSize)
+        .attr("height", tileSize)
+        .style("fill", '#E74826');
 
     tiles.transition().duration(1000)
-        .style("fill", function(d) { return availScale(d.availability); });
+        .style("fill", function(d) { return availScale(d.availability); })
+        //.call(endall, tick);
+        //.each("end", tick);
 
-    tiles.select("title").text(function(d) { return d.availability; });
+    // Place times at top of chart
+    var timeLabels = svg.selectAll("text")
+                  .data(data)
+                  .enter();
+
+    timeLabels.append("text")
+      .text(function(d) {
+        return times[d.time-1];
+      })
+      .attr("class", function(d, i) { return "timeLabel mono axis axis-worktime"; })
+      .attr("x", function(d) {
+        var result = windowTransFunct(timeFunction(d));
+        return result * gridSize + (gridSize / 4) - (2 * times[d.time-1].length);
+      })
+      .attr("y", -24);
+// TEMP day label
+    timeLabels.append("text")
+      .text(function(d) {
+        return d.day +':'+ timeFunction(d);
+      })
+      .attr("class", "axis-worktime")
+      .attr("x", function(d) {
+        var result = windowTransFunct(timeFunction(d));
+        return result * gridSize + (gridSize / 3) - (2 * times[d.time-1].length);
+      })
+      .attr("y", -38);
+
+    tiles.select("title").text(function(d) { return d.gate + ' ' + d.time; });
+
+    //tiles.each('end', tick);  // calls tick() once transition completed
 
     tiles.exit().remove();
+
+
+
+
+
+
+
+//temp i
+var i = 328;
+    function tick() {
+      var toPush = windowPushFunction(availability, ++i - 1, 12);
+console.log(toPush);
+
+        console.log("here");
+
+      //PUSH DATA TO JOINED data
+console.log(data[15]);
+      //data.push(toPush[2])
+console.log(data);
+      for(j = data.length; j > 0; j-= 12) {
+        data.splice(j, 0, toPush[j/12 - 1])
+      }
+
+
+console.log(data);
+
+
+var tiles = d3.select("#chart").select("svg").select("g").selectAll(".time").data(data,keyFunction)
+
+
+
+      tiles.enter()
+              .append("rect")
+          .attr("x", function(d) {
+            //console.log("HEL "+ (tFD - relativeMin))
+            var result = windowTransFunct(timeFunction(d));
+            //console.log(result);
+            return result * gridSize;
+          })
+          .attr("y", function(d) { return (d.gate - 1) * gridSize; })
+          .attr("rx", 8)
+          .attr("ry", 8)
+          .attr("class", "time bordered")
+          .attr("width", tileSize)
+          .attr("height", tileSize)
+          .style("fill", function(d) { return availScale(d.availability); })
+
+      tiles.transition().duration(1000).delay(1000)
+          //.style("fill", function(d) {
+          //  return availScale(d.availability); })
+          //.duration(duration)
+          .ease('linear')
+          .attr('transform', 'translate(' + -gridSize +', 0)')
+          //.each('end', tick);  // calls tick() once transition completed;
+          //.call(endall, tick);
+
+      for(j = data.length; j >= 0; j-= (12+1)) {
+        data.splice(j, 1)
+      }
+
+      console.log(data);
+      //tiles.data(data, keyFunction).exit().remove();
+      d3.transition().delay(1000).call(function() { tiles.exit().remove()})
+
+      /* Slide paths left
+      tiles//.attr('transform', null)
+              .transition()
+              .duration(duration)
+              .ease('linear')
+              .attr('transform', 'translate(' + gridSize +', 0)')
+              .each('end', tick);  // calls tick() once transition completed
+*/
+
+
+      /* Place times at top of chart
+      var timeLabels = svg.selectAll("text")
+                    .data(data)
+                    .enter();
+
+      // Redraw the chart
+      //d3.select()
+
+/*
+      current.data.push(20 + Math.random() * 100);
+      current.path.attr('d', line);
+
+      // Shift domain
+      x.domain([now - (limit - 2) * duration, now - duration]);
+
+      // Slide x-axis left
+      axis.transition()
+              .duration(duration)
+              .ease('linear')
+              .call(x.axis)
+
+      // Slide paths left
+      paths.attr('transform', null)
+              .transition()
+              .duration(duration)
+              .ease('linear')
+              .attr('transform', 'translate(' + x(now - (limit - 1) * duration) + ')')
+              .each('end', tick);  // calls tick() once transition completed
+
+      // Remove oldest data point from each group
+      current.data.shift()
+
+
+*/
+
+
+    }
+    //tick();
+var startGraph = window.setInterval(tick, 2000);
 
 };
 
 
+
+var windowPushFunction = function(data, cur, numVisible) {
+    return windowFunction(data, cur + 12, 1);
+}
+
+//console.log(windowPushFunction(availability, windowFunction(availability, 12), 328, 12));
+
+
+
 // INITIATE HEATMAP CHART - pass JSON
-heatmapChart(availability);
-
-
-/*
-newData = data.filter(function(d) {
-    //get just *12 tiles of the data that corresponds to the current time.
-    //if(Date.now()/MATH > ( 48 - tileNum[12?] )) { //WRONG
-    if(d.
-
-    return true;
-});
+//heatmapChart(availability);
+heatmapChart(windowFunction(availability, 328, 12));
+//heatmapChart(windowFunction(availability, currentTime, 12));
 
 
 
 
- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ var limit = 60, // why? // frequency of datum
+     duration = 1650,
+     now = new Date(Date.now() - duration);
+ //console.log(new Date(Date.now()));
+ //console.log(now);
+
+ var width2 = 500,
+     height2 = 200;
+
+ current = {
+     value: 0,
+     color: 'orange',
+     data: d3.range(limit).map(function() {
+         return 1;
+     })
+ }
+
+ var x = d3.time.scale()
+         .domain([now - (limit - 2), now - duration]) // why minus 2?
+         .range([0, width2]);
+
+ var y = d3.scale.linear()
+         .domain([0, 100])
+         .range([height2, 0]);
+
+ var line = d3.svg.line()
+         .interpolate('basis')
+         .x(function(d, i) {
+             return x(now - (limit - 1 - i) * duration); //why minus 1?
+         })
+         .y(function(d) {
+             return y(d)
+         });
+
+ var svg = d3.select('#rtChart2').append('svg')
+         .attr('class', 'chart')
+         .attr('width', width2)
+         .attr('height', height2 + 50)
+         .attr('transform', 'translate(0,-1000)');
+
+ var axis = svg.append('g')
+         .attr('class', 'x axis')
+         .attr('transform', 'translate(0,20)') //'translate(0,' + height2 + ')')
+         .call(x.axis = d3.svg.axis().scale(x).orient('top')
+                 .tickSize(0,0));
+
+ var paths = svg.append('g');
+
+
+ current.path = paths.append('path')
+        .data([current.data])
+        .attr('class', name + ' group')
+        .style('stroke', current.color);
+
+ function tick() {
+     now = new Date();
+
+     current.data.push(20 + Math.random() * 100);
+     current.path.attr('d', line);
+
+     // Shift domain
+     x.domain([now - (limit - 2) * duration, now - duration]);
+
+     // Slide x-axis left
+     axis.transition()
+             .duration(duration)
+             .ease('linear')
+             .call(x.axis)
+
+     // Slide paths left
+     paths.attr('transform', null)
+             .transition()
+             .duration(duration)
+             .ease('linear')
+             .attr('transform', 'translate(' + x(now - (limit - 1) * duration) + ')')
+             .each('end', tick);  // calls tick() once transition completed
+
+     // Remove oldest data point from each group
+     current.data.shift()
+ }
+
+ tick()
+
+
+
+
+
+
+
+
+
+
+
+
+
+ times = [];
+
+ function createGraph() {
+     // this is how time would be stored on the server
+     var now = Date.now();
+
+     // add datum
+     times.push({
+         milliseconds: parseInt(now.toString().slice(-3)),
+         time: now
+     });
+
+     // remove old data
+     if (times.length > 120)
+         times.shift();
+     // define plot boundaries
+     var width3 = 300,
+         height3 = 60;
+     var margin = {
+         top: 0,
+         right: 10,
+         bottom: 5,
+         left: 50
+     }
+     var plot = {
+         width3: width3 - margin.right - margin.left,
+         height3: height3 - margin.top - margin.bottom
+     }
+
+     // x-axis is time
+     var x = d3.time.scale()
+         .range([0, plot.width3]);
+
+     // y-axis is numerical
+     var y = d3.scale.linear()
+         .range([plot.height3, 0]);
+
+     // set x axis scale
+     var xAxis = d3.svg.axis()
+         .scale(x)
+         .orient('bottom')
+         .tickFormat('')
+         .tickSize(0, 0);
+
+     // set y axis scale
+     var yAxis = d3.svg.axis()
+         .scale(y)
+         .orient('left')
+         .tickSize(0, .5)
+         .ticks(3);
+
+     // set time span to show
+     var timeCap = width3 * 40 // 12s
+     var latest = times.length ? times[times.length - 1].time : 0;
+
+     // only show ..
+     var data = times.filter(function(d) {
+         return d.time >= latest - timeCap;
+     });
+
+     x.domain([latest - timeCap, latest]);
+     y.domain([0, 1000]);
+
+     var line = d3.svg.line()
+         .x(function(d) { return x(parseInt(d.time)) })
+         .y(function(d) { return y(d.milliseconds) });
+
+     // make the graph
+     var svg = d3.select('#rtChart3')
+                .append('svg')
+                  .attr('transform', 'translate('+ margin.left + ',' + -800 +')');
+
+     var graph = undefined;
+
+     // if there is no .graph-g element, create it and give it axis
+     if (d3.select('.graph-g').empty()) {
+         graph = svg.append('g')
+             .attr('class', 'graph-g')
+             .attr('width', plot.width3)
+             .attr('height', plot.height3)
+             .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+         //add axes
+         graph.append('g')
+             .attr('class', 'x axis')
+             .attr('transform', 'translate(0,' + plot.height3 + ')')
+             .call(xAxis)
+             .append('text')
+             .attr('dx', (plot.width / 2))
+             .attr('dy', '1em')
+             .style('text-anchor', 'middle')
+             .text('Time');
+
+         graph.append('g')
+             .attr('class', 'y axis')
+             .call(yAxis)
+             .append('text')
+             .attr('transform', 'rotate(-90)')
+             .attr('dx', (0 - plot.height3 / 2))
+             .attr('dy', '-2.8em')
+             .style('text-anchor', 'middle')
+             .text('ms');
+     } else {
+         graph = d3.select('.graph-g')
+     }
+
+     // remove old line
+     graph.select('.line').remove();
+
+     //add data line
+     graph.append('path')
+         .datum(data)
+         .attr('class', 'line')
+         .attr('d', line);
+ }
+
+ var startGraph = window.setInterval(createGraph, 100);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

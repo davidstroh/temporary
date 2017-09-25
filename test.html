@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <style>
+
+    </style>
+</head>
+<body>
+
+
+<div class="chart"><svg></svg></div>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+
+var data = [{"data": 1, "key": 1}, {"data": 4, "key": 1}, {"data": 5, "key": 1}, {"data": 51, "key": ''}, {"data": 24, "key": 1}, {"data": 8, "key": 1}, {"data": 12, "key": 1}, {"data": 1, "key": 1}, {"data": 1, "key": 1}, {"data": 20, "key": 1}];
+var chart = d3.select('.chart svg');
+
+// Add all bars to the chart.
+var rects = chart
+    .selectAll('rect')
+    .data(data, function(d) { return (d.key +''+ d.data); })
+    .enter()
+createRectangles(rects);
+
+// Remove bars after a short delay.
+d3.selectAll('g')
+    .data([{"data": 5, "key": 1}, {"data": 51, "key": ''}], function(d) { return (d.date +''+ d.key); })
+    .order()
+    .exit()
+    .transition()
+    .delay(3000)
+    .remove();
+
+// Separate out the creation from the data selection.
+function createRectangles(rectang){
+
+    // Create a group with a rectangle
+    rectang.append("g").append('rect')
+        .attr("class", "rectangle")
+        .attr("stroke", "black")
+        .attr("stroke-width","1px")
+        .attr("fill","none")
+        .attr("x", 0)
+        .attr("y", function(d, i) { return 25 * i; } )
+        .attr("width", function(d) { return 22 * d.data; } )
+        .attr("height", "20");
+
+    // Add text to the group
+    d3.selectAll("g")
+        .append("text")
+        .text(function(d){ return d.data; })
+        .attr("x", 2)
+        .attr("y", function(d, i) { return 25 * i + 16; } )
+        .attr("fill", "steelblue");
+
+   return rects;
+}
+
+
+
+</script>
+</body>
+</html>
