@@ -208,7 +208,7 @@ var timeLabels = svg.selectAll(".timeLabel")
 
 
 // DEFINE HEATMAP CHART
-var heatmapChart = function(data, tick) {
+var heatmapChart = function(data) {
 
     var availScale = d3.scale.ordinal()
         .domain(['closed', 'outbound', 'open'])
@@ -250,7 +250,7 @@ var heatmapChart = function(data, tick) {
 
     tiles.transition().duration(1000)
         .style("fill", function(d) { return availScale(d.availability); })
-        //.call(endall, tick);
+        .call(endall, tick);
         //.each("end", tick);
 
     // Place times at top of chart
@@ -293,23 +293,30 @@ var heatmapChart = function(data, tick) {
 
 
 //temp i
-var i = 328;
+var i = 328,
+    tickCount = 1;
     function tick() {
+        var tiles = svg.selectAll(".time")
+            .data(data,keyFunction);
       var toPush = windowPushFunction(availability, ++i - 1, 12);
 console.log(toPush);
 
-        console.log("here");
+
 
       //PUSH DATA TO JOINED data
-console.log(data[15]);
-      //data.push(toPush[2])
+//console.log(data[15]);
+      //data.push(toPush[2]
+        console.log('before splice')
 console.log(data);
       for(j = data.length; j > 0; j-= 12) {
+          //console.log(toPush[j/12 - 1].time);
+          //toPush[j/12 - 1].time = toPush[j/12 - 1].time - tickCount;
+          //console.log(toPush[j/12 - 1].time);
         data.splice(j, 0, toPush[j/12 - 1])
       }
 
-
-console.log(data);
+        console.log('after splice')
+//console.log(data);
 
 
 var tiles = d3.select("#chart").select("svg").select("g").selectAll(".time").data(data,keyFunction)
@@ -322,7 +329,7 @@ var tiles = d3.select("#chart").select("svg").select("g").selectAll(".time").dat
             //console.log("HEL "+ (tFD - relativeMin))
             var result = windowTransFunct(timeFunction(d));
             //console.log(result);
-            return result * gridSize;
+            return result * gridSize - gridSize * tickCount;//WORK HERE
           })
           .attr("y", function(d) { return (d.gate - 1) * gridSize; })
           .attr("rx", 8)
@@ -332,22 +339,36 @@ var tiles = d3.select("#chart").select("svg").select("g").selectAll(".time").dat
           .attr("height", tileSize)
           .style("fill", function(d) { return availScale(d.availability); })
 
-      tiles.transition().duration(1000).delay(1000)
-          //.style("fill", function(d) {
-          //  return availScale(d.availability); })
-          //.duration(duration)
-          .ease('linear')
-          .attr('transform', 'translate(' + -gridSize +', 0)')
-          //.each('end', tick);  // calls tick() once transition completed;
-          //.call(endall, tick);
 
+
+console.log('before shift')
+        //console.log(data);
       for(j = data.length; j >= 0; j-= (12+1)) {
         data.splice(j, 1)
       }
-
+console.log('after shift')
       console.log(data);
+
+
+
+        tiles.transition().duration(1000).delay(1000)
+        //.style("fill", function(d) {
+        //  return availScale(d.availability); })
+        //.duration(duration)
+            .ease('linear')
+            .attr('transform', 'translate(' + -gridSize * tickCount++ +', 0)')
+            //.each('end', tick);  // calls tick() once transition completed;
+            .call(endall, tick);
+
+
+
+
       //tiles.data(data, keyFunction).exit().remove();
-      d3.transition().delay(1000).call(function() { tiles.exit().remove()})
+      //d3.transition().delay(1000).call(function() { tiles.exit().remove()})
+        tiles.exit().remove()
+
+
+
 
       /* Slide paths left
       tiles//.attr('transform', null)
@@ -356,7 +377,11 @@ var tiles = d3.select("#chart").select("svg").select("g").selectAll(".time").dat
               .ease('linear')
               .attr('transform', 'translate(' + gridSize +', 0)')
               .each('end', tick);  // calls tick() once transition completed
-*/
+*
+
+
+
+
 
 
       /* Place times at top of chart
@@ -394,10 +419,10 @@ var tiles = d3.select("#chart").select("svg").select("g").selectAll(".time").dat
 
 */
 
-
+        console.log("here");
     }
     //tick();
-var startGraph = window.setInterval(tick, 2000);
+//var startGraph = window.setInterval(tick, 3000);
 
 };
 
