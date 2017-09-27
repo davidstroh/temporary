@@ -307,7 +307,7 @@ console.log(toPush);
 //console.log(data[15]);
       //data.push(toPush[2]
         console.log('before splice')
-console.log(data);
+//console.log(data);
       for(j = data.length; j > 0; j-= 12) {
           //console.log(toPush[j/12 - 1].time);
           //toPush[j/12 - 1].time = toPush[j/12 - 1].time - tickCount;
@@ -315,7 +315,7 @@ console.log(data);
         data.splice(j, 0, toPush[j/12 - 1])
       }
 
-        console.log('after splice')
+        //console.log('after splice')
 //console.log(data);
 
 
@@ -329,7 +329,8 @@ var tiles = d3.select("#chart").select("svg").select("g").selectAll(".time").dat
             //console.log("HEL "+ (tFD - relativeMin))
             var result = windowTransFunct(timeFunction(d));
             //console.log(result);
-            return result * gridSize - gridSize * tickCount;//WORK HERE
+            console.log('placed at '+ (result * gridSize - gridSize * tickCount));
+            return result * gridSize - gridSize * tickCount;
           })
           .attr("y", function(d) { return (d.gate - 1) * gridSize; })
           .attr("rx", 8)
@@ -341,7 +342,7 @@ var tiles = d3.select("#chart").select("svg").select("g").selectAll(".time").dat
 
 
 
-console.log('before shift')
+//console.log('before shift')
         //console.log(data);
       for(j = data.length; j >= 0; j-= (12+1)) {
         data.splice(j, 1)
@@ -350,74 +351,40 @@ console.log('after shift')
       console.log(data);
 
 
-
+console.log('slid to '+(-gridSize * tickCount) +'='+ -gridSize +'*'+ tickCount);
         tiles.transition().duration(1000).delay(1000)
         //.style("fill", function(d) {
         //  return availScale(d.availability); })
         //.duration(duration)
             .ease('linear')
-            .attr('transform', 'translate(' + -gridSize * tickCount++ +', 0)')
+            //.attr('transform', function(d,i) { return 'translate(' + (-gridSize * tickCount) +', 0)'; })
+            .attr('transform', function(d,i) {
+              //if((i+1)%13==0) {
+              //  console.log('hit '+i);console.log(d)
+              //}
+              //console.log('tF '+ timeFunction(d) +':'+ (timeFunction(d)/tickCount));
+              //console.log('ceil '+(Math.ceil((i+1)/8))  +':'+ 'ceil '+(Math.ceil((i+1)/8))/13)
+              //console.log('ceil (i+1):'+ (i+1) +'; (i+1)/8):'+ ((i+1)/8) +'; Math.ceil((i+1)/8))/13: '+ Math.ceil((i+1)/8)%13 +'; '+Math.ceil((Math.ceil((i+1)/8))/13))
+              //console.log('ceil '+ i +' /13= '+ tickCount* (Math.ceil((i+1)/13)))
+              //console.log('tF'+i+':'+ windowTransFunct(timeFunction(d)))
+              console.log(i+' : '+ (8*13))
+              //return 'translate(' + (-gridSize * ((i+1)%13!=0 ? tickCount : Math.ceil((i+1)/13) )) +', 0)';
+              //timeFunction: ( ((d.day-1) * 48) + d.time - 1)
+              //windowTransFunct: (tFD - relativeMin > -1 ? tFD - relativeMin : tFD + 1 + range)
+
+              //Math.ceil(i/13)
+
+              return 'translate(' + (-gridSize * ((i+1)%13!=0 ? tickCount : Math.ceil(i/(8*13)) )) +', 0)';
+            })
             //.each('end', tick);  // calls tick() once transition completed;
             .call(endall, tick);
-
+tickCount++;
 
 
 
       //tiles.data(data, keyFunction).exit().remove();
       //d3.transition().delay(1000).call(function() { tiles.exit().remove()})
         tiles.exit().remove()
-
-
-
-
-      /* Slide paths left
-      tiles//.attr('transform', null)
-              .transition()
-              .duration(duration)
-              .ease('linear')
-              .attr('transform', 'translate(' + gridSize +', 0)')
-              .each('end', tick);  // calls tick() once transition completed
-*
-
-
-
-
-
-
-      /* Place times at top of chart
-      var timeLabels = svg.selectAll("text")
-                    .data(data)
-                    .enter();
-
-      // Redraw the chart
-      //d3.select()
-
-/*
-      current.data.push(20 + Math.random() * 100);
-      current.path.attr('d', line);
-
-      // Shift domain
-      x.domain([now - (limit - 2) * duration, now - duration]);
-
-      // Slide x-axis left
-      axis.transition()
-              .duration(duration)
-              .ease('linear')
-              .call(x.axis)
-
-      // Slide paths left
-      paths.attr('transform', null)
-              .transition()
-              .duration(duration)
-              .ease('linear')
-              .attr('transform', 'translate(' + x(now - (limit - 1) * duration) + ')')
-              .each('end', tick);  // calls tick() once transition completed
-
-      // Remove oldest data point from each group
-      current.data.shift()
-
-
-*/
 
         console.log("here");
     }
