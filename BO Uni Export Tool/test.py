@@ -1,7 +1,15 @@
 from collections import OrderedDict
 
 
+def boObject():
+	
+
+
+
+
+
 objectList = []
+objectDict = OrderedDict()
 i = 0
 
 with open('HRInfoUni.txt') as file:
@@ -11,7 +19,12 @@ with open('HRInfoUni.txt') as file:
 
 	prevTabCount = 0
 
+	count = 0
 	for line in file:
+#		if(count is 15):
+#			print("break")
+#			break
+#		count=count+1
 #		print(len(line) - len(line.lstrip()))
 
 		if(skipNextLine == 1):
@@ -39,8 +52,9 @@ with open('HRInfoUni.txt') as file:
 
 				elif(tabs == 1):
 #					print('true '+str(line))
-					diction = OrderedDict({line: []})
-					objectList.append(diction)
+#					diction = OrderedDict({line: []})
+#					objectList.append(diction)
+					objectDict[line] = []
 					prevTabCount = tabs
 
 
@@ -53,6 +67,9 @@ with open('HRInfoUni.txt') as file:
 					else:
 						diction = line
 
+
+					prevTabCount = tabs
+'''
 					if(prevTabCount == 2):
 						length1 = len(objectList) - 1
 						lastKey = next(reversed(objectList[length1]))
@@ -66,8 +83,8 @@ with open('HRInfoUni.txt') as file:
 						lastKey = next(reversed(objectList[length1]))
 						objectList[length1][lastKey].append(diction)
 						#print(objectList[length1][lastKey])
+'''
 
-					prevTabCount = tabs
 
 
 '''
@@ -78,7 +95,6 @@ with open('HRInfoUni.txt') as file:
 						diction = {line: []}
 					else:
 						diction = line
-
 					if(prevTabCount == 3):
 						#objectList.append(diction)
 						length1 = len(objectList) - 1
@@ -86,7 +102,6 @@ with open('HRInfoUni.txt') as file:
 						length2 = len(objectList[length1][lastKey]) - 1
 						#objectList[length1][lastKey].append(line)
 						objectList[length1][lastKey][length2]
-
 					if(prevTabCount == 2):
 						print('start')
 						print(objectList)
@@ -95,12 +110,10 @@ with open('HRInfoUni.txt') as file:
 						lastKey = next(reversed(objectList[length1]))
 						length2 = len(objectList[length1][lastKey]) - 1
 						lastKey2 = next(reversed(objectList[length1][lastKey][ length2 ]))
-
 						print(objectList[length1][lastKey][length2][lastKey2])
 						objectList[length1][lastKey][length2][lastKey2].append(diction)
 						#print(objectList[0][lastKey])
 					#objectList.append(diction)
-
 					prevTabCount = tabs
 '''
 
@@ -108,7 +121,7 @@ with open('HRInfoUni.txt') as file:
 
 
 #				print('hey ' + line)
-print(objectList)
+print(objectDict)
 
 
 
