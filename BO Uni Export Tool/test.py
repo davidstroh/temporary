@@ -48,24 +48,29 @@ with open('HRInfoUni.txt') as file:
 				elif(tabs == 2):
 					nextLine = next(file)
 					nextTabs = (len(nextLine) - len(nextLine.lstrip())) / 4
-					if(nextTabs > 2):
+					if(nextTabs == 3):
 						diction = OrderedDict({line: []})
 					else:
 						diction = line
 
 					if(prevTabCount == 2):
-						objectList.append(diction)
+						length1 = len(objectList) - 1
+						lastKey = next(reversed(objectList[length1]))
+						length2 = len(objectList[length1][lastKey]) - 1
+						print(str(line) +'  '+ str(objectList[length1][lastKey][length2]))
+						if(objectList[length1][lastKey][length2] is OrderedDict):
+							objectList[length1][lastKey][length2]
 
 					if(prevTabCount == 1):
 						length1 = len(objectList) - 1
 						lastKey = next(reversed(objectList[length1]))
 						objectList[length1][lastKey].append(diction)
-						print(objectList[length1][lastKey])
+						#print(objectList[length1][lastKey])
 
 					prevTabCount = tabs
 
 
-
+'''
 				elif(tabs == 3):
 					nextLine = next(file)
 					(len(nextLine) - len(nextLine.lstrip())) / 4
@@ -75,7 +80,12 @@ with open('HRInfoUni.txt') as file:
 						diction = line
 
 					if(prevTabCount == 3):
-						objectList.append(diction)
+						#objectList.append(diction)
+						length1 = len(objectList) - 1
+						lastKey = next(reversed(objectList[length1]))
+						length2 = len(objectList[length1][lastKey]) - 1
+						#objectList[length1][lastKey].append(line)
+						objectList[length1][lastKey][length2]
 
 					if(prevTabCount == 2):
 						print('start')
@@ -92,13 +102,13 @@ with open('HRInfoUni.txt') as file:
 					#objectList.append(diction)
 
 					prevTabCount = tabs
-
+'''
 
 
 
 
 #				print('hey ' + line)
-#print(objectList)
+print(objectList)
 
 
 

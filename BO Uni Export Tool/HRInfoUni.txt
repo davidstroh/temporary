@@ -1,4 +1,4 @@
-        
+
 Business Layer Human Resources Information
 -------------------------------------------------
 
@@ -20,9 +20,9 @@ Object layout
             Business Processed Week Month Number
             Business Processed Week Year Number
             Business Processed Month Number YYYYMM
-            Business Processed Month Descrtiption (Month)
-            Business Processed Month Descrtiption (MM - Month)
-            Custom Business Processed Month Descrtiption (MM - Month)
+            Business Processed Month Description (Month)
+            Business Processed Month Description (MM - Month)
+            Custom Business Processed Month Description (MM - Month)
             Business Processed Month Abbreviation (Mon)
             Business Processed Month Number in Quarter
             Business Processed Month Year Number (MM)
