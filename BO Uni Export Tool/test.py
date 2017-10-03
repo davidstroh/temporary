@@ -1,128 +1,196 @@
 from collections import OrderedDict
 
 
-def boObject():
-	
+class boObject:
+	count = 0
+
+	def __init__(self, name, tabs):
+		# Initializzes the data
+		self.name = name
+		self.tabs = tabs
+		boObject.count = boObject.count+1
+
+	def appendItem(self, value, tabs):
+		if not self.isFolder():
+			self.children = []
+		self.children.append(boObject(value, tabs))
+
+
+	def addObject(self, value, currTab):
+		if(currTab == self.tabs + 1):
+			self.appendItem(value, currTab)
+#			print(':'.join([value, str(currTab)]) )
+
+		elif(currTab > self.tabs + 1):
+			if not self.isFolder():
+				print('ERROR @'+str(boObject.count)+': '+ self.name+': '+value)
+				return
+			self.children[-1].addObject(value, currTab)
+
+
+	def isFolder(self):
+#		print(self.name + ' ' + str(hasattr(self, 'children')))
+		return hasattr(self, 'children')
+
+	def getLatest(self):
+		return self.children[-1]
+
+	def printAll(self):
+		print (('    ' * int(self.tabs)) + self.name)
+		if(self.isFolder()):
+#			print('fold: '+ self.name)
+			for child in self.children:
+				child.printAll()
 
 
 
 
 
-objectList = []
-objectDict = OrderedDict()
-i = 0
+class boItem:
+
+	def __init__(self, name):
+		self.name = name
+		self.coreItemIdentifier = None
+		self.overridableProperties = None
+		self.businessName = None
+		self.description = None
+		self.state = None
+		self.dataType = None
+		self.access = None
+		self.forResult = None
+		self.sqlDefinition = None
+		self.canBeUsedIn = None
+
+	def setCoreItemIdentifier(self, value):
+		self.coreItemIdentifier = value
+	def setOverridableProperties(self, value):
+		self.overridableProperties = value
+	def setBusinessName(self, value):
+		self.businessName = value
+	def setDescription(self, value):
+		self.description = value
+	def setState(self, value):
+		self.state = value
+	def setDataType(self, value):
+		self.dataType = value
+	def setAccess(self, value):
+		self.access = value
+	def setForResult(self, value):
+		self.forResult = value
+	def setSqlDefinition(self, value):
+		self.sqlDefinition = value
+	def setCanBeUsedIn(self, value):
+		self.canBeUsedIn = value
+
+	def printAll(self):
+		toPrint = [str(self.coreItemIdentifier),str(self.overridableProperties),str(self.businessName),str(self.description),str(self.state),str(self.dataType),str(self.access),str(self.forResult),str(self.sqlDefinition),str(self.canBeUsedIn)]
+		print(self.name)
+		print('    ' + (':'.join(toPrint)))
+
+
+def countTabs(value):
+	return (len(value) - len(value.lstrip())) / 4
+
+
+
+
+
+busObj = None
+#count = 0
 
 with open('HRInfoUni.txt') as file:
 
 	inObjLay = 0
+	inDimAttr = 0
 	skipNextLine = 0
-
-	prevTabCount = 0
+	dimensionList = []
 
 	count = 0
 	for line in file:
-#		if(count is 15):
-#			print("break")
-#			break
-#		count=count+1
-#		print(len(line) - len(line.lstrip()))
+		count=count+1
 
 		if(skipNextLine == 1):
-			print('skip this ' + line)
-
 			# once 'Object layout' is found, skip the next (useless) line
 			if(inObjLay == 1):
 				skipNextLine = 0
-
-
-
+			elif(inDimAttr == 1):
+				skipNextLine = 0
 
 
 		elif(skipNextLine != 1):
+
 			if('Object layout' in line):
 				inObjLay = 1
 				skipNextLine = 1
+
 			elif(inObjLay == 1 and skipNextLine != 1):
-				tabs = (len(line) - len(line.lstrip())) / 4
+				tabs = countTabs(line)
 				line = line.lstrip().rstrip('\n')
 
+				# If there are no tabs, the Object Layout section is over
 				if(tabs < 1):
 					inObjLay = 0
-					break
 
+				# If tabs is 1, the current line is the Universe name, and should be the main object folder
 				elif(tabs == 1):
-#					print('true '+str(line))
-#					diction = OrderedDict({line: []})
-#					objectList.append(diction)
-					objectDict[line] = []
-					prevTabCount = tabs
+					busObj = boObject(line, tabs)
 
+				if(tabs > 1):
+					busObj.addObject(line, tabs)
 
+			elif('Dimensions and Attributes' in line):
+				inDimAttr = 1
+				skipNextLine = 1
 
-				elif(tabs == 2):
-					nextLine = next(file)
-					nextTabs = (len(nextLine) - len(nextLine.lstrip())) / 4
-					if(nextTabs == 3):
-						diction = OrderedDict({line: []})
-					else:
-						diction = line
+			elif(inDimAttr == 1 and skipNextLine != 1):
+				line = line.lstrip().rstrip('\n')
 
+				if('Dimension' in line and '-------------------------------------------------' in next(file)):
+					line = line.replace('Dimension: ', '')
+					newDim = boItem(line)
 
-					prevTabCount = tabs
-'''
-					if(prevTabCount == 2):
-						length1 = len(objectList) - 1
-						lastKey = next(reversed(objectList[length1]))
-						length2 = len(objectList[length1][lastKey]) - 1
-						print(str(line) +'  '+ str(objectList[length1][lastKey][length2]))
-						if(objectList[length1][lastKey][length2] is OrderedDict):
-							objectList[length1][lastKey][length2]
+					li=next(file).rstrip('\n')
+					if('coreItemIdentifier' in li):
+						newDim.setCoreItemIdentifier(li.replace('coreItemIdentifier :','').lstrip())
+						li=next(file).rstrip('\n')
+					if('overridableProperties' in li):
+						newDim.setOverridableProperties(li.replace('overridableProperties :','').lstrip())
+						li=next(file).rstrip('\n')
+					if('businessName' in li):
+						newDim.setBusinessName(li.replace('businessName :','').lstrip())
+						li=next(file).rstrip('\n')
+					if('description' in li):
+						newDim.setDescription(li.replace('description :','').lstrip())
+						li=next(file).rstrip('\n')
+					if(li == ''):
+						li = next(file).rstrip('\n')
+						if(li == ''):
+							li = next(file).rstrip('\n')
+					elif('state' in li):
+						newDim.setState(li.replace('state :','').lstrip())
+						li=next(file).rstrip('\n')
+					if('dataType' in li):
+						newDim.setDataType(li.replace('dataType :','').lstrip())
+						li=next(file).rstrip('\n')
+					if('access' in li):
+						newDim.setAccess(li.replace('access :','').lstrip())
+						li=next(file).rstrip('\n')
+					if('forResult' in li):
+						newDim.setForResult(li.replace('forResult :','').lstrip())
+						li=next(file).rstrip('\n')
+					if('SQL Definition' in li):
+						newDim.setSqlDefinition(li.replace('SQL Definition :','').lstrip())
+						li=next(file).rstrip('\n')
+					if('Can be used in' in li):
+						newDim.setCanBeUsedIn(li.replace('Can be used in  :','').lstrip())
 
-					if(prevTabCount == 1):
-						length1 = len(objectList) - 1
-						lastKey = next(reversed(objectList[length1]))
-						objectList[length1][lastKey].append(diction)
-						#print(objectList[length1][lastKey])
-'''
+#					newDim.printAll()
+					dimensionList.append(newDim)
 
+				else:
+					print(str(count) + ': '+ line)
 
-
-'''
-				elif(tabs == 3):
-					nextLine = next(file)
-					(len(nextLine) - len(nextLine.lstrip())) / 4
-					if(nextTabs > 3):
-						diction = {line: []}
-					else:
-						diction = line
-					if(prevTabCount == 3):
-						#objectList.append(diction)
-						length1 = len(objectList) - 1
-						lastKey = next(reversed(objectList[length1]))
-						length2 = len(objectList[length1][lastKey]) - 1
-						#objectList[length1][lastKey].append(line)
-						objectList[length1][lastKey][length2]
-					if(prevTabCount == 2):
-						print('start')
-						print(objectList)
-						length1 = len(objectList) - 1
-						print('length '+ str(length1))
-						lastKey = next(reversed(objectList[length1]))
-						length2 = len(objectList[length1][lastKey]) - 1
-						lastKey2 = next(reversed(objectList[length1][lastKey][ length2 ]))
-						print(objectList[length1][lastKey][length2][lastKey2])
-						objectList[length1][lastKey][length2][lastKey2].append(diction)
-						#print(objectList[0][lastKey])
-					#objectList.append(diction)
-					prevTabCount = tabs
-'''
-
-
-
-
-#				print('hey ' + line)
-print(objectDict)
-
+#busObj.printAll()
 
 
 
