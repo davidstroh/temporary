@@ -367,14 +367,14 @@ console.log('slid to '+(-gridSize * tickCount) +'='+ -gridSize +'*'+ tickCount);
               //console.log('ceil (i+1):'+ (i+1) +'; (i+1)/8):'+ ((i+1)/8) +'; Math.ceil((i+1)/8))/13: '+ Math.ceil((i+1)/8)%13 +'; '+Math.ceil((Math.ceil((i+1)/8))/13))
               //console.log('ceil '+ i +' /13= '+ tickCount* (Math.ceil((i+1)/13)))
               //console.log('tF'+i+':'+ windowTransFunct(timeFunction(d)))
-              console.log(i+' : '+ (8*13))
+              //console.log(i+' : '+ (8*13))
               //return 'translate(' + (-gridSize * ((i+1)%13!=0 ? tickCount : Math.ceil((i+1)/13) )) +', 0)';
               //timeFunction: ( ((d.day-1) * 48) + d.time - 1)
               //windowTransFunct: (tFD - relativeMin > -1 ? tFD - relativeMin : tFD + 1 + range)
 
               //Math.ceil(i/13)
-
-              return 'translate(' + (-gridSize * ((i+1)%13!=0 ? tickCount : Math.ceil(i/(8*13)) )) +', 0)';
+              console.log('tF'+i+':'+ (windowTransFunct(timeFunction(d)) - tickCount))
+              return 'translate(' + (-gridSize * ((i+1)%13!=0 ? tickCount : 1 )) +', 0)';
             })
             //.each('end', tick);  // calls tick() once transition completed;
             .call(endall, tick);
