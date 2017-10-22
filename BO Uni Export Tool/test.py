@@ -132,8 +132,11 @@ busObj = None
 
 with open('HRInfoUni.txt') as file:
 
-	inObjLay = 0
-	inDimAttr = 0
+	inObjLayGroup = 0 # indicates whether current parsed line is within the Object Layout Section
+	inDimAttrGroup = 0 # indicates whether current parsed line is within the Dimensions and Attributes Section
+	inIndiDimGroup = 0 # indicates whether current parsed line is within an individual dimension grouping
+	isBlankLine = 0 # indicates whether the parsed line is blank to be used in the next iteration
+	prevLine = blank
 	skipNextLine = 0
 	dimensionList = []
 
@@ -144,25 +147,25 @@ with open('HRInfoUni.txt') as file:
 
 		if(skipNextLine == 1):
 			# once 'Object layout' is found, skip the next (useless) line
-			if(inObjLay == 1):
+			if(inObjLayGroup == 1):
 				skipNextLine = 0
-			elif(inDimAttr == 1):
+			elif(inDimAttrGroup == 1):
 				skipNextLine = 0
 
 
 		elif(skipNextLine != 1):
 
 			if('Object layout' in line):
-				inObjLay = 1
+				inObjLayGroup = 1
 				skipNextLine = 1
 
-			elif(inObjLay == 1 and skipNextLine != 1):
+			elif(inObjLayGroup == 1 and skipNextLine != 1):
 				tabs = countTabs(line)
 				line = line.lstrip().rstrip('\n')
 
 				# If there are no tabs, the Object Layout section is over
 				if(tabs < 1):
-					inObjLay = 0
+					inObjLayGroup = 0
 
 				# If tabs is 1, the current line is the Universe name, and should be the main object folder
 				elif(tabs == 1):
@@ -171,19 +174,36 @@ with open('HRInfoUni.txt') as file:
 				if(tabs > 1):
 					busObj.addObject(line, tabs)
 
+
 			elif('Dimensions and Attributes' in line):
-				inDimAttr = 1
+				inDimAttrGroup = 1
 				skipNextLine = 1
 
-			elif(inDimAttr == 1 and skipNextLine != 1):
+			elif(inDimAttrGroup == 1 and skipNextLine != 1):
 				line = line.lstrip().rstrip('\n')
 
 				count=count+1
-				if('Dimension' in line and '-------------------------------------------------' in next(file)):
+				if(inIndiDimGroup = 0 and 'Dimension' in line and '-------------------------------------------------' in next(file)):
+					inIndiDimGroup = 1
 					line = line.replace('Dimension: ', '')
 					newDim = boItem(line)
+					prevLine = next(file).lstrip().rstrip('\n')
+					count = count+1
 
-					li=next(file).rstrip('\n')
+				elif(inIndiDimGroup = 1):
+
+					if('coreItemIdentifier' in list):
+						newDim.setCoreItemIdentifier(list.replace('coreItemIdentifier :','').lstrip())
+					elif('overridableProperties' in list):
+						newDim.setOverridableProperties(list.replace('overridableProperties :','').lstrip())
+					elif('businessName' in list):
+						newDim.setBusinessName(list.replace('businessName :','').lstrip())
+					elif('description' in list):
+						newDim.setDescription(list.replace('description :','').lstrip())
+					elif(not list):
+
+
+'''					li=next(file).rstrip('\n')
 					count=count+1
 					if('coreItemIdentifier' in li):
 						newDim.setCoreItemIdentifier(li.replace('coreItemIdentifier :','').lstrip())
@@ -241,7 +261,7 @@ with open('HRInfoUni.txt') as file:
 					dimensionList.append(newDim)
 					if newDim.getMissingData():
 						print(str(count) + ': '+ str(newDim.getMissingData()))
-
+'''
 
 
 #busObj.printAll()
