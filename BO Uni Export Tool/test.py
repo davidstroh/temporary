@@ -117,56 +117,13 @@ class boItem:
 		self.previousAttr = type
 
 
-	def setCoreItemIdentifier(self, value):
-		value = value.replace('coreItemIdentifier :','').lstrip()
-		self.coreItemIdentifier = value if value else 'Empty'
-		self.previousAttr = 'coreItemIdentifier'
 	def getCoreItemIdentifier(self):
 		return self.coreItemIdentifier
-	def setOverridableProperties(self, value):
-		value = value.replace('overridableProperties :','').lstrip()
-		self.overridableProperties = value if value else self.overridableProperties
-		self.previousAttr = 'overridableProperties'
 	def getOverridableProperties(self):
 		return self.overridableProperties
-	def setBusinessName(self, value):
-		value = value.replace('businessName :','').lstrip()
-		self.businessName = value if value else self.businessName
-		self.previousAttr = 'businessName'
-	def setDescription(self, value):
-		value = value.replace('description :','').lstrip()
-		self.description = value if value else ''
-		self.previousAttr = 'description'
-	def setState(self, value):
-		value = value.replace('state :','').lstrip()
-		self.state = value if value else self.state
-		self.previousAttr = 'state'
 	def getState(self):
 		return self.state
-	def setDataType(self, value):
-		value = value.replace('dataType :','').lstrip()
-		self.dataType = value if value else self.dataType
-		self.previousAttr = 'dataType'
-	def setAccess(self, value):
-		value = value.replace('access :','').lstrip()
-		self.access = value if value else self.access
-		self.previousAttr = 'access'
-	def setForResult(self, value):
-		value = value.replace('forResult :','').lstrip()
-		self.forResult = value if value else self.forResult
-		self.previousAttr = 'forResult'
-	def setSqlDefinition(self, value):
-		value = value.replace('SQL Definition :','').lstrip()
-		self.sqlDefinition = value if value else self.sqlDefinition
-		self.previousAttr = 'SQL Definition'
-	def setListOfValues(self, value):
-		value = value.replace('List of Values :','').lstrip()
-		self.listOfValues = value if value else self.listOfValues
-		self.previousAttr = 'List of Values'
-	def setCanBeUsedIn(self, value):
-		value = value.replace('Can be used in :','').lstrip()
-		self.canBeUsedIn = value if value else self.canBeUsedIn
-		self.previousAttr = 'Can be used in'
+
 
 	def appendAttribute(self, type, value):
 		if('coreItemIdentifier' in type):
@@ -191,32 +148,29 @@ class boItem:
 			self.canBeUsedIn += value
 
 
-
-
 	def printAll(self):
 		toPrint = [str(self.coreItemIdentifier),str(self.overridableProperties),str(self.businessName),str(self.description),str(self.state),str(self.dataType),str(self.access),str(self.forResult),str(self.sqlDefinition),str(self.canBeUsedIn)]
 		print(self.name)
 		print('    ' + (':'.join(toPrint)))
 
-	def getMissingData(self):
-		#return "here "+ self.name +' : '+ str(self.coreItemIdentifier) if self.coreItemIdentifier else "heree "+ self.name
-		#return (self.coreItemIdentifier if self.coreItemIdentifier else (self.overridableProperties if self.overridableProperties else (self.businessName if self.businessName else (self.description if self.description else (self.state if self.state else (self.dataType if self.dataType else (self.access if self.access else (self.forResult if self.forResult else (self.sqlDefinition if self.sqlDefinition else self.canBeUsedIn if self.canBeUsedIn else ("here "+ self.name))))))))))
-		return (("here coreItemIdentifier- "+ self.coreItemIdentifier +'~'+ self.name) if not self.coreItemIdentifier else (("here overridableProperties- "+ self.overridableProperties +'~'+self.name) if not self.overridableProperties else (("here businessName- "+ self.businessName +'~'+self.name) if not self.businessName else (("here description- "+ str(self.description) +'~'+self.name) if not self.description else (("here state- "+ str(self.state) +'~'+self.name) if not self.state else (("here dataType- "+ str(self.dataType) +'~'+self.name) if not self.dataType else (("here access- "+ str(self.access) +'~'+self.name) if not self.access else (("here forResult- "+ str(self.forResult) +'~'+self.name) if not self.forResult else (("here sqlDefinition- "+ str(self.sqlDefinition) +'~'+self.name) if not self.sqlDefinition else (("here canBeUsedIn- "+ str(self.canBeUsedIn) +'~'+self.name) if not self.access else None))))))))))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 def countTabs(value):
 	return (len(value) - len(value.lstrip())) / 4
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -277,6 +231,7 @@ with open('HRInfoUni.txt') as file:
 				skipNextLine = 1
 
 			elif(inDimAttrGroup == 1 and skipNextLine != 1):
+				tabs = countTabs(line)
 				line = line.lstrip().rstrip('\n')
 
 				count=count+1
@@ -312,75 +267,17 @@ with open('HRInfoUni.txt') as file:
 					elif('Can be used in' in line):
 						newDim.setAttr('Can be used in', line)
 
+					elif(line and not tabs):
+						#print('RIGHT HERE MOTHERFUCKER')
+						newDim.appendAttribute(newDim.getPrevAttr(), line)
+
 					elif not line:
-						print('HERE: '+ line)
 						inIndiDimGroup = 0
 						dimensionList.append(newDim)
 					else:
-						print('')
+						print(line)
 
 
-
-					'''
-					li=next(file).rstrip('\n')
-					count=count+1
-					if('coreItemIdentifier' in li):
-						newDim.setCoreItemIdentifier(li.replace('coreItemIdentifier :','').lstrip())
-						li=next(file).rstrip('\n')
-						count=count+1
-					if('overridableProperties' in li):
-						newDim.setOverridableProperties(li.replace('overridableProperties :','').lstrip())
-	#					print(str(errorCount) +' '+ li +' '+ str(newDim.getCoreItemIdentifier()))
-						li=next(file).rstrip('\n')
-						count=count+1
-					if('businessName' in li):
-						newDim.setBusinessName(li.replace('businessName :','').lstrip())
-						li=next(file).rstrip('\n')
-						count=count+1
-					if('description' in li):
-						newDim.setDescription(li.replace('description :','').lstrip())
-						li=next(file).rstrip('\n')
-						count=count+1
-					if not li:
-	#					print('here ' + str(count))
-						errorCount=errorCount+1
-						li = next(file).rstrip('\n')
-						count=count+1
-						if not li:
-	#						print('here too '+ str(count))
-							li = next(file).rstrip('\n')
-	#						print('is ok: '+ li)
-							count=count+1
-					elif('state' in li):
-						newDim.setState(li.replace('state :','').lstrip())
-						toPrint = str(count) +' hey '+ li +'| '+ str(newDim.getState()) if not newDim.getState() else str(count) +' yay '+ li +'| '
-						print(toPrint)
-						li=next(file).rstrip('\n')
-						count=count+1
-					if('dataType' in li):
-						newDim.setDataType(li.replace('dataType :','').lstrip())
-						li=next(file).rstrip('\n')
-						count=count+1
-					if('access' in li):
-						newDim.setAccess(li.replace('access :','').lstrip())
-						li=next(file).rstrip('\n')
-						count=count+1
-					if('forResult' in li):
-						newDim.setForResult(li.replace('forResult :','').lstrip())
-						li=next(file).rstrip('\n')
-						count=count+1
-					if('SQL Definition' in li):
-						newDim.setSqlDefinition(li.replace('SQL Definition :','').lstrip())
-						li=next(file).rstrip('\n')
-						count=count+1
-					if('Can be used in' in li):
-						newDim.setCanBeUsedIn(li.replace('Can be used in  :','').lstrip())
-
-#					newDim.printAll()
-					dimensionList.append(newDim)
-					if newDim.getMissingData():
-						print(str(count) + ': '+ str(newDim.getMissingData()))
-					'''
 
 
 #busObj.printAll()
