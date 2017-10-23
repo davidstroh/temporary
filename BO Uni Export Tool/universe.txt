@@ -4622,7 +4622,7 @@ Else 'Unknown' End
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Worker Low Performer Indicator
-    description : received below meets expectations…
+    description : received below meets expectationsï¿½
 
     state : Active
     dataType : String
@@ -9117,7 +9117,7 @@ Else '!' End
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 0 Party ID
-    description : Field that identifies the worker_party_ID of the worker’s leader who is at level 0 of the organization’s reporting layer hierarchy. For context, level 0 is the top layer of the hierarchy which is the CEO.
+    description : Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 0 of the organizationï¿½s reporting layer hierarchy. For context, level 0 is the top layer of the hierarchy which is the CEO.
 
     state : Active
     dataType : String
@@ -9131,7 +9131,7 @@ Else '!' End
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 1 Party ID
-    description : Field that identifies the worker_party_ID of the worker’s leader who is at level 1 of the organization’s reporting layer hierarchy. For context, level 1 is one level from the CEO.
+    description : Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 1 of the organizationï¿½s reporting layer hierarchy. For context, level 1 is one level from the CEO.
 
     state : Active
     dataType : String
@@ -9145,7 +9145,7 @@ Else '!' End
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 2 Party ID
-    description : Field that identifies the worker_party_ID of the worker’s leader who is at level 2 of the organization’s reporting layer hierarchy. For context, level 2 is two levels from the CEO.
+    description : Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 2 of the organizationï¿½s reporting layer hierarchy. For context, level 2 is two levels from the CEO.
 
     state : Active
     dataType : String
@@ -9159,7 +9159,7 @@ Else '!' End
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 3 Party ID
-    description : Field that identifies the worker_party_ID of the worker’s leader who is at level 3 of the organization’s reporting layer hierarchy. For context, level 3 is three levels from the CEO.
+    description : Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 3 of the organizationï¿½s reporting layer hierarchy. For context, level 3 is three levels from the CEO.
 
     state : Active
     dataType : String
@@ -9173,7 +9173,7 @@ Else '!' End
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 4 Party ID
-    description : Field that identifies the worker_party_ID of the worker’s leader who is at level 4 of the organization’s reporting layer hierarchy. For context, level 4 is four levels from the CEO.
+    description : Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 4 of the organizationï¿½s reporting layer hierarchy. For context, level 4 is four levels from the CEO.
 
     state : Active
     dataType : String
@@ -9187,7 +9187,7 @@ Else '!' End
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 5 Party ID
-    description : Field that identifies the worker_party_ID of the worker’s leader who is at level 5 of the organization’s reporting layer hierarchy. For context, level 5 is five levels from the CEO.
+    description : Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 5 of the organizationï¿½s reporting layer hierarchy. For context, level 5 is five levels from the CEO.
 
     state : Active
     dataType : String
@@ -9201,7 +9201,7 @@ Else '!' End
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 6 Party ID
-    description : Field that identifies the worker_party_ID of the worker’s leader who is at level 6 of the organization’s reporting layer hierarchy. For context, level 6 is six levels from the CEO.
+    description : Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 6 of the organizationï¿½s reporting layer hierarchy. For context, level 6 is six levels from the CEO.
 
     state : Active
     dataType : String
@@ -9215,7 +9215,7 @@ Else '!' End
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 7 Party ID
-    description : Field that identifies the worker_party_ID of the worker’s leader who is at level 7 of the organization’s reporting layer hierarchy. For context, level 7 is seven levels from the CEO.
+    description : Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 7 of the organizationï¿½s reporting layer hierarchy. For context, level 7 is seven levels from the CEO.
 
     state : Active
     dataType : String
@@ -9229,7 +9229,7 @@ Else '!' End
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 8 Party ID
-    description : Field that identifies the worker_party_ID of the worker’s leader who is at level 8 of the organization’s reporting layer hierarchy. For context, level 8 is eight levels from the CEO.
+    description : Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 8 of the organizationï¿½s reporting layer hierarchy. For context, level 8 is eight levels from the CEO.
 
     state : Active
     dataType : String
@@ -9243,7 +9243,7 @@ Else '!' End
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 9 Party ID
-    description : Field that identifies the worker_party_ID of the worker’s leader who is at level 9 of the organization’s reporting layer hierarchy. For context, level 9 is nine levels from the CEO.
+    description : Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 9 of the organizationï¿½s reporting layer hierarchy. For context, level 9 is nine levels from the CEO.
 
     state : Active
     dataType : String
@@ -9257,7 +9257,7 @@ Else '!' End
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 10 Party ID
-    description : Field that identifies the worker_party_ID of the worker’s leader who is at level 10 of the organization’s reporting layer hierarchy. For context, level 10 is ten levels from the CEO.
+    description : Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 10 of the organizationï¿½s reporting layer hierarchy. For context, level 10 is ten levels from the CEO.
 
     state : Active
     dataType : String
@@ -9271,7 +9271,7 @@ Else '!' End
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 11 Party ID
-    description : Field that identifies the worker_party_ID of the worker’s leader who is at level 11 of the organization’s reporting layer hierarchy. For context, level 11 is eleven levels from the CEO.
+    description : Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 11 of the organizationï¿½s reporting layer hierarchy. For context, level 11 is eleven levels from the CEO.
 
     state : Active
     dataType : String
@@ -9285,7 +9285,7 @@ Else '!' End
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 12 Party ID
-    description : Field that identifies the worker_party_ID of the worker’s leader who is at level 12 of the organization’s reporting layer hierarchy. For context, level 12 is twelve levels from the CEO.
+    description : Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 12 of the organizationï¿½s reporting layer hierarchy. For context, level 12 is twelve levels from the CEO.
 
     state : Active
     dataType : String
@@ -9299,7 +9299,7 @@ Else '!' End
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 13 Party ID
-    description : Field that identifies the worker_party_ID of the worker’s leader who is at level 13 of the organization’s reporting layer hierarchy. For context, level 13 is thirteen levels from the CEO.
+    description : Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 13 of the organizationï¿½s reporting layer hierarchy. For context, level 13 is thirteen levels from the CEO.
 
     state : Active
     dataType : String
@@ -9313,7 +9313,7 @@ Else '!' End
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 14 Party ID
-    description : Field that identifies the worker_party_ID of the worker’s leader who is at level 14 of the organization’s reporting layer hierarchy. For context, level 14 is fourteen levels from the CEO.
+    description : Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 14 of the organizationï¿½s reporting layer hierarchy. For context, level 14 is fourteen levels from the CEO.
 
     state : Active
     dataType : String
@@ -9327,7 +9327,7 @@ Else '!' End
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 15 Party ID
-    description : Field that identifies the worker_party_ID of the worker’s leader who is at level 15 of the organization’s reporting layer hierarchy. For context, level 15 is fifteen levels from the CEO.
+    description : Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 15 of the organizationï¿½s reporting layer hierarchy. For context, level 15 is fifteen levels from the CEO.
 
     state : Active
     dataType : String
@@ -9397,7 +9397,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 0 Party Sec ID
-    description : Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 0 of the organization’s reporting layer hierarchy. For context, level 0 is the top layer of the hierarchy which is the CEO
+    description : Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 0 of the organizationï¿½s reporting layer hierarchy. For context, level 0 is the top layer of the hierarchy which is the CEO
 
     state : Active
     dataType : String
@@ -9411,7 +9411,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 1 Party Sec ID
-    description : Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 1 of the organization’s reporting layer hierarchy. For context, level 1 is one level from the CEO.
+    description : Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 1 of the organizationï¿½s reporting layer hierarchy. For context, level 1 is one level from the CEO.
 
     state : Active
     dataType : String
@@ -9425,7 +9425,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 2 Party Sec ID
-    description : Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 2 of the organization’s reporting layer hierarchy. For context, level 2 is two levels from the CEO.
+    description : Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 2 of the organizationï¿½s reporting layer hierarchy. For context, level 2 is two levels from the CEO.
 
     state : Active
     dataType : String
@@ -9439,7 +9439,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 3 Party Sec ID
-    description : Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 3 of the organization’s reporting layer hierarchy. For context, level 3 is three levels from the CEO.
+    description : Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 3 of the organizationï¿½s reporting layer hierarchy. For context, level 3 is three levels from the CEO.
 
     state : Active
     dataType : String
@@ -9453,7 +9453,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 4 Party Sec ID
-    description : Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 4 of the organization’s reporting layer hierarchy. For context, level 4 is four levels from the CEO.
+    description : Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 4 of the organizationï¿½s reporting layer hierarchy. For context, level 4 is four levels from the CEO.
 
     state : Active
     dataType : String
@@ -9467,7 +9467,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 5 Party Sec ID
-    description : Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 5 of the organization’s reporting layer hierarchy. For context, level 5 is five levels from the CEO.
+    description : Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 5 of the organizationï¿½s reporting layer hierarchy. For context, level 5 is five levels from the CEO.
 
     state : Active
     dataType : String
@@ -9481,7 +9481,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 6 Party Sec ID
-    description : Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 6 of the organization’s reporting layer hierarchy. For context, level 6 is six levels from the CEO.
+    description : Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 6 of the organizationï¿½s reporting layer hierarchy. For context, level 6 is six levels from the CEO.
 
     state : Active
     dataType : String
@@ -9495,7 +9495,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 7 Party Sec ID
-    description : Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 7 of the organization’s reporting layer hierarchy. For context, level 7 is seven levels from the CEO.
+    description : Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 7 of the organizationï¿½s reporting layer hierarchy. For context, level 7 is seven levels from the CEO.
 
     state : Active
     dataType : String
@@ -9509,7 +9509,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 8 Party Sec ID
-    description : Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 8 of the organization’s reporting layer hierarchy. For context, level 8 is eight levels from the CEO.
+    description : Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 8 of the organizationï¿½s reporting layer hierarchy. For context, level 8 is eight levels from the CEO.
 
     state : Active
     dataType : String
@@ -9523,7 +9523,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 9 Party Sec ID
-    description : Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 9 of the organization’s reporting layer hierarchy. For context, level 9 is nine levels from the CEO.
+    description : Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 9 of the organizationï¿½s reporting layer hierarchy. For context, level 9 is nine levels from the CEO.
 
     state : Active
     dataType : String
@@ -9537,7 +9537,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 10 Party Sec ID
-    description : Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 10 of the organization’s reporting layer hierarchy. For context, level 10 is ten levels from the CEO.
+    description : Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 10 of the organizationï¿½s reporting layer hierarchy. For context, level 10 is ten levels from the CEO.
 
     state : Active
     dataType : String
@@ -9551,7 +9551,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 11 Party Sec ID
-    description : Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 11 of the organization’s reporting layer hierarchy. For context, level 11 is eleven levels from the CEO.
+    description : Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 11 of the organizationï¿½s reporting layer hierarchy. For context, level 11 is eleven levels from the CEO.
 
     state : Active
     dataType : String
@@ -9565,7 +9565,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 12 Party Sec ID
-    description : Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 12 of the organization’s reporting layer hierarchy. For context, level 12 is twelve levels from the CEO.
+    description : Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 12 of the organizationï¿½s reporting layer hierarchy. For context, level 12 is twelve levels from the CEO.
 
     state : Active
     dataType : String
@@ -9579,7 +9579,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 13 Party Sec ID
-    description : Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 13 of the organization’s reporting layer hierarchy. For context, level 13 is thirteen levels from the CEO.
+    description : Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 13 of the organizationï¿½s reporting layer hierarchy. For context, level 13 is thirteen levels from the CEO.
 
     state : Active
     dataType : String
@@ -9593,7 +9593,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 14 Party Sec ID
-    description : Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 14 of the organization’s reporting layer hierarchy. For context, level 14 is fourteen levels from the CEO.
+    description : Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 14 of the organizationï¿½s reporting layer hierarchy. For context, level 14 is fourteen levels from the CEO.
 
     state : Active
     dataType : String
@@ -9607,7 +9607,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Report Layer 15 Party Sec ID
-    description : Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 15 of the organization’s reporting layer hierarchy. For context, level 15 is fifteen levels from the CEO.
+    description : Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 15 of the organizationï¿½s reporting layer hierarchy. For context, level 15 is fifteen levels from the CEO.
 
     state : Active
     dataType : String
@@ -9747,7 +9747,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 0 Party ID
-    description : Prior, Field that identifies the worker_party_ID of the worker’s leader who is at level 0 of the organization’s reporting layer hierarchy. For context, level 0 is the top layer of the hierarchy which is the CEO.
+    description : Prior, Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 0 of the organizationï¿½s reporting layer hierarchy. For context, level 0 is the top layer of the hierarchy which is the CEO.
 
     state : Active
     dataType : String
@@ -9761,7 +9761,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 1 Party ID
-    description : Prior, Field that identifies the worker_party_ID of the worker’s leader who is at level 1 of the organization’s reporting layer hierarchy. For context, level 1 is one level from the CEO.
+    description : Prior, Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 1 of the organizationï¿½s reporting layer hierarchy. For context, level 1 is one level from the CEO.
 
     state : Active
     dataType : String
@@ -9775,7 +9775,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 2 Party ID
-    description : Prior, Field that identifies the worker_party_ID of the worker’s leader who is at level 2 of the organization’s reporting layer hierarchy. For context, level 2 is two levels from the CEO.
+    description : Prior, Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 2 of the organizationï¿½s reporting layer hierarchy. For context, level 2 is two levels from the CEO.
 
     state : Active
     dataType : String
@@ -9789,7 +9789,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 3 Party ID
-    description : Prior, Field that identifies the worker_party_ID of the worker’s leader who is at level 3 of the organization’s reporting layer hierarchy. For context, level 3 is three levels from the CEO.
+    description : Prior, Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 3 of the organizationï¿½s reporting layer hierarchy. For context, level 3 is three levels from the CEO.
 
     state : Active
     dataType : String
@@ -9803,7 +9803,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 4 Party ID
-    description : Prior, Field that identifies the worker_party_ID of the worker’s leader who is at level 4 of the organization’s reporting layer hierarchy. For context, level 4 is four levels from the CEO.
+    description : Prior, Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 4 of the organizationï¿½s reporting layer hierarchy. For context, level 4 is four levels from the CEO.
 
     state : Active
     dataType : String
@@ -9817,7 +9817,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 5 Party ID
-    description : Prior, Field that identifies the worker_party_ID of the worker’s leader who is at level 5 of the organization’s reporting layer hierarchy. For context, level 5 is five levels from the CEO.
+    description : Prior, Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 5 of the organizationï¿½s reporting layer hierarchy. For context, level 5 is five levels from the CEO.
 
     state : Active
     dataType : String
@@ -9831,7 +9831,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 6 Party ID
-    description : Prior, Field that identifies the worker_party_ID of the worker’s leader who is at level 6 of the organization’s reporting layer hierarchy. For context, level 6 is six levels from the CEO.
+    description : Prior, Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 6 of the organizationï¿½s reporting layer hierarchy. For context, level 6 is six levels from the CEO.
 
     state : Active
     dataType : String
@@ -9845,7 +9845,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 7 Party ID
-    description : Prior, Field that identifies the worker_party_ID of the worker’s leader who is at level 7 of the organization’s reporting layer hierarchy. For context, level 7 is seven levels from the CEO.
+    description : Prior, Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 7 of the organizationï¿½s reporting layer hierarchy. For context, level 7 is seven levels from the CEO.
 
     state : Active
     dataType : String
@@ -9859,7 +9859,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 8 Party ID
-    description : Prior, Field that identifies the worker_party_ID of the worker’s leader who is at level 8 of the organization’s reporting layer hierarchy. For context, level 8 is eight levels from the CEO.
+    description : Prior, Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 8 of the organizationï¿½s reporting layer hierarchy. For context, level 8 is eight levels from the CEO.
 
     state : Active
     dataType : String
@@ -9873,7 +9873,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 9 Party ID
-    description : Prior, Field that identifies the worker_party_ID of the worker’s leader who is at level 9 of the organization’s reporting layer hierarchy. For context, level 9 is nine levels from the CEO.
+    description : Prior, Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 9 of the organizationï¿½s reporting layer hierarchy. For context, level 9 is nine levels from the CEO.
 
     state : Active
     dataType : String
@@ -9887,7 +9887,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 10 Party ID
-    description : Prior, Field that identifies the worker_party_ID of the worker’s leader who is at level 10 of the organization’s reporting layer hierarchy. For context, level 10 is ten levels from the CEO.
+    description : Prior, Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 10 of the organizationï¿½s reporting layer hierarchy. For context, level 10 is ten levels from the CEO.
 
     state : Active
     dataType : String
@@ -9901,7 +9901,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 12 Party ID
-    description : Prior, Field that identifies the worker_party_ID of the worker’s leader who is at level 12 of the organization’s reporting layer hierarchy. For context, level 12 is twelve levels from the CEO.
+    description : Prior, Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 12 of the organizationï¿½s reporting layer hierarchy. For context, level 12 is twelve levels from the CEO.
 
     state : Active
     dataType : String
@@ -9915,7 +9915,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 11 Party ID
-    description : Prior, Field that identifies the worker_party_ID of the worker’s leader who is at level 11 of the organization’s reporting layer hierarchy. For context, level 11 is eleven levels from the CEO.
+    description : Prior, Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 11 of the organizationï¿½s reporting layer hierarchy. For context, level 11 is eleven levels from the CEO.
 
     state : Active
     dataType : String
@@ -9929,7 +9929,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 13 Party ID
-    description : Prior, Field that identifies the worker_party_ID of the worker’s leader who is at level 13 of the organization’s reporting layer hierarchy. For context, level 13 is thirteen levels from the CEO.
+    description : Prior, Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 13 of the organizationï¿½s reporting layer hierarchy. For context, level 13 is thirteen levels from the CEO.
 
     state : Active
     dataType : String
@@ -9943,7 +9943,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 14 Party ID
-    description : Prior, Field that identifies the worker_party_ID of the worker’s leader who is at level 14 of the organization’s reporting layer hierarchy. For context, level 14 is fourteen levels from the CEO.
+    description : Prior, Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 14 of the organizationï¿½s reporting layer hierarchy. For context, level 14 is fourteen levels from the CEO.
 
     state : Active
     dataType : String
@@ -9957,7 +9957,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 15 Party ID
-    description : Prior, Field that identifies the worker_party_ID of the worker’s leader who is at level 15 of the organization’s reporting layer hierarchy. For context, level 15 is fifteen levels from the CEO.
+    description : Prior, Field that identifies the worker_party_ID of the workerï¿½s leader who is at level 15 of the organizationï¿½s reporting layer hierarchy. For context, level 15 is fifteen levels from the CEO.
 
     state : Active
     dataType : String
@@ -10013,7 +10013,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 0 Party Secondary ID
-    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 0 of the organization’s reporting layer hierarchy. For context, level 0 is the top layer of the hierarchy which is the CEO
+    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 0 of the organizationï¿½s reporting layer hierarchy. For context, level 0 is the top layer of the hierarchy which is the CEO
 
     state : Active
     dataType : String
@@ -10027,7 +10027,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 1 Party Secondary ID
-    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 1 of the organization’s reporting layer hierarchy. For context, level 1 is one level from the CEO.
+    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 1 of the organizationï¿½s reporting layer hierarchy. For context, level 1 is one level from the CEO.
 
     state : Active
     dataType : String
@@ -10041,7 +10041,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 2 Party Secondary ID
-    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 2 of the organization’s reporting layer hierarchy. For context, level 2 is two levels from the CEO.
+    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 2 of the organizationï¿½s reporting layer hierarchy. For context, level 2 is two levels from the CEO.
 
     state : Active
     dataType : String
@@ -10055,7 +10055,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 3 Party Secondary ID
-    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 3 of the organization’s reporting layer hierarchy. For context, level 3 is three levels from the CEO.
+    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 3 of the organizationï¿½s reporting layer hierarchy. For context, level 3 is three levels from the CEO.
 
     state : Active
     dataType : String
@@ -10069,7 +10069,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 4 Party Secondary ID
-    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 4 of the organization’s reporting layer hierarchy. For context, level 4 is four levels from the CEO.
+    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 4 of the organizationï¿½s reporting layer hierarchy. For context, level 4 is four levels from the CEO.
 
     state : Active
     dataType : String
@@ -10083,7 +10083,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 5 Party Secondary ID
-    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 5 of the organization’s reporting layer hierarchy. For context, level 5 is five levels from the CEO.
+    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 5 of the organizationï¿½s reporting layer hierarchy. For context, level 5 is five levels from the CEO.
 
     state : Active
     dataType : String
@@ -10097,7 +10097,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 6 Party Secondary ID
-    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 6 of the organization’s reporting layer hierarchy. For context, level 6 is six levels from the CEO.
+    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 6 of the organizationï¿½s reporting layer hierarchy. For context, level 6 is six levels from the CEO.
 
     state : Active
     dataType : String
@@ -10111,7 +10111,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 7 Party Secondary ID
-    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 7 of the organization’s reporting layer hierarchy. For context, level 7 is seven levels from the CEO.
+    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 7 of the organizationï¿½s reporting layer hierarchy. For context, level 7 is seven levels from the CEO.
 
     state : Active
     dataType : String
@@ -10125,7 +10125,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 8 Party Secondary ID
-    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 8 of the organization’s reporting layer hierarchy. For context, level 8 is eight levels from the CEO.
+    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 8 of the organizationï¿½s reporting layer hierarchy. For context, level 8 is eight levels from the CEO.
 
     state : Active
     dataType : String
@@ -10139,7 +10139,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 9 Party Secondary ID
-    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 9 of the organization’s reporting layer hierarchy. For context, level 9 is nine levels from the CEO.
+    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 9 of the organizationï¿½s reporting layer hierarchy. For context, level 9 is nine levels from the CEO.
 
     state : Active
     dataType : String
@@ -10153,7 +10153,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 10 Party Secondary ID
-    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 10 of the organization’s reporting layer hierarchy. For context, level 10 is ten levels from the CEO.
+    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 10 of the organizationï¿½s reporting layer hierarchy. For context, level 10 is ten levels from the CEO.
 
     state : Active
     dataType : String
@@ -10167,7 +10167,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 11 Party Secondary ID
-    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 11 of the organization’s reporting layer hierarchy. For context, level 11 is eleven levels from the CEO.
+    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 11 of the organizationï¿½s reporting layer hierarchy. For context, level 11 is eleven levels from the CEO.
 
     state : Active
     dataType : String
@@ -10181,7 +10181,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 12 Party Secondary ID
-    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 12 of the organization’s reporting layer hierarchy. For context, level 12 is twelve levels from the CEO.
+    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 12 of the organizationï¿½s reporting layer hierarchy. For context, level 12 is twelve levels from the CEO.
 
     state : Active
     dataType : String
@@ -10195,7 +10195,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 13 Party Secondary ID
-    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 13 of the organization’s reporting layer hierarchy. For context, level 13 is thirteen levels from the CEO.
+    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 13 of the organizationï¿½s reporting layer hierarchy. For context, level 13 is thirteen levels from the CEO.
 
     state : Active
     dataType : String
@@ -10209,7 +10209,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 14 Party Secondary ID
-    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 14 of the organization’s reporting layer hierarchy. For context, level 14 is fourteen levels from the CEO.
+    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 14 of the organizationï¿½s reporting layer hierarchy. For context, level 14 is fourteen levels from the CEO.
 
     state : Active
     dataType : String
@@ -10223,7 +10223,7 @@ Flag that indicates if the Worker Reporting to is active
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Prior Report Layer 15 Party Sec ID
-    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the worker’s leader who is at level 15 of the organization’s reporting layer hierarchy. For context, level 15 is fifteen levels from the CEO.
+    description : Prior, Secondary unique identifier that obfuscates the worker's party ID of the workerï¿½s leader who is at level 15 of the organizationï¿½s reporting layer hierarchy. For context, level 15 is fifteen levels from the CEO.
 
     state : Active
     dataType : String
@@ -15653,7 +15653,7 @@ end,'999')
     coreItemIdentifier : 
     overridableProperties : -1
     businessName : Indirect Report Indicator
-    description : In the worker's report layers,  this flag identifies the leaders who the employee reports to indirectly in the worker's hierarchy. This is typically everyone else other than the worker and their supervisor (direct report)
+    description : In the worker's report layers,ï¿½ this flag identifies the leaders who the employee reports to indirectly in the worker's hierarchy. This is typically everyone else other than the worker and their supervisor (direct report)
 
     state : Active
     dataType : String
@@ -16151,7 +16151,7 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.MONTH_NUM=@Prompt('Select Year and Month ','N','Report§\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent)
+Where expression : A_BUSINESS_PROCESS_DAY.MONTH_NUM=@Prompt('Select Year and Month ','N','Reportï¿½\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent)
         
 Filter: Filter Previous 3 Year Data Based on Input
 -------------------------------------------------
@@ -16164,9 +16164,9 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.MONTH_NUM>=@Prompt('Select Year and Month ','N','Report§\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent)-300
+Where expression : A_BUSINESS_PROCESS_DAY.MONTH_NUM>=@Prompt('Select Year and Month ','N','Reportï¿½\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent)-300
 AND 
-A_BUSINESS_PROCESS_DAY.MONTH_NUM<@Prompt('Select Year and Month ','N','Report§\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent)
+A_BUSINESS_PROCESS_DAY.MONTH_NUM<@Prompt('Select Year and Month ','N','Reportï¿½\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent)
         
 Filter: Filter Current and Previous Year Data Based on Data Input
 -------------------------------------------------
@@ -16179,9 +16179,9 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.MONTH_NUM=@Prompt('Select Year and Month ','N','Report§\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent)-100
+Where expression : A_BUSINESS_PROCESS_DAY.MONTH_NUM=@Prompt('Select Year and Month ','N','Reportï¿½\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent)-100
 OR
-A_BUSINESS_PROCESS_DAY.MONTH_NUM=@Prompt('Select Year and Month ','N','Report§\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent)
+A_BUSINESS_PROCESS_DAY.MONTH_NUM=@Prompt('Select Year and Month ','N','Reportï¿½\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent)
         
 Filter: Filter Current and Previous 3 Year Data Based on Input
 -------------------------------------------------
@@ -16194,9 +16194,9 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.MONTH_NUM>=@Prompt('Select Year and Month ','N','Report§\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent)-300
+Where expression : A_BUSINESS_PROCESS_DAY.MONTH_NUM>=@Prompt('Select Year and Month ','N','Reportï¿½\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent)-300
 AND 
-A_BUSINESS_PROCESS_DAY.MONTH_NUM<=@Prompt('Select Year and Month ','N','Report§\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent)
+A_BUSINESS_PROCESS_DAY.MONTH_NUM<=@Prompt('Select Year and Month ','N','Reportï¿½\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent)
         
 Filter: Filter Current Year to Date Data Based on Input From Activity
 -------------------------------------------------
@@ -16209,9 +16209,9 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : (A_BUSINESS_PROCESS_DAY.DAY_SID>=SUBSTR(@Prompt('Select Year and Month ','N','Report§\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent),1,4)||'01'||'01'
+Where expression : (A_BUSINESS_PROCESS_DAY.DAY_SID>=SUBSTR(@Prompt('Select Year and Month ','N','Reportï¿½\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent),1,4)||'01'||'01'
 AND 
-A_BUSINESS_PROCESS_DAY.MONTH_NUM<=@Prompt('Select Year and Month ','N','Report§\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent))
+A_BUSINESS_PROCESS_DAY.MONTH_NUM<=@Prompt('Select Year and Month ','N','Reportï¿½\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent))
         
 Filter: Get Me Point In Time Data
 -------------------------------------------------
@@ -16250,7 +16250,7 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT > @Select(Report§\ Dashboard Specific Custom Objects\Last Load Date)
+Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT > @Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date)
         
 Filter: Filter Activity MTD Detail Data
 -------------------------------------------------
@@ -16263,7 +16263,7 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT > date_trunc('MONTH',@Select(Report§\ Dashboard Specific Custom Objects\Last Load Date))
+Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT > date_trunc('MONTH',@Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date))
 
         
 Filter: Filter Previous Month Data
@@ -16277,9 +16277,9 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >= date_trunc('Month',@Select(Report§\ Dashboard Specific Custom Objects\Last Load Date))
+Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >= date_trunc('Month',@Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date))
 AND 
-A_BUSINESS_PROCESS_DAY.DAY_DT <= @Select(Report§\ Dashboard Specific Custom Objects\Last Load Date)
+A_BUSINESS_PROCESS_DAY.DAY_DT <= @Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date)
         
 Filter: Filter Previous Year Month Data
 -------------------------------------------------
@@ -16292,9 +16292,9 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >= date_trunc('Month',add_months(@Select(Report§\ Dashboard Specific Custom Objects\Last Load Date),-12))
+Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >= date_trunc('Month',add_months(@Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date),-12))
 AND 
-A_BUSINESS_PROCESS_DAY.DAY_DT <= add_months(@Select(Report§\ Dashboard Specific Custom Objects\Last Load Date),-12)
+A_BUSINESS_PROCESS_DAY.DAY_DT <= add_months(@Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date),-12)
         
 Filter: Filter QTD Data
 -------------------------------------------------
@@ -16307,7 +16307,7 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >= date_trunc('Qtr',@Select(Report§\ Dashboard Specific Custom Objects\Last Load Date))
+Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >= date_trunc('Qtr',@Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date))
         
 Filter: Filter Current Year To Date Data
 -------------------------------------------------
@@ -16320,7 +16320,7 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >=date_trunc('YEAR',@Select(Report§\ Dashboard Specific Custom Objects\Last Load Date))
+Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >=date_trunc('YEAR',@Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date))
         
 Filter: Filter Current and Previous Year Data
 -------------------------------------------------
@@ -16333,9 +16333,9 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >= add_months(date_trunc('YEAR',@Select(Report§\ Dashboard Specific Custom Objects\Last Load Date)),-12)
+Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >= add_months(date_trunc('YEAR',@Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date)),-12)
 AND 
-A_BUSINESS_PROCESS_DAY.DAY_DT <= @Select(Report§\ Dashboard Specific Custom Objects\Last Load Date)
+A_BUSINESS_PROCESS_DAY.DAY_DT <= @Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date)
         
 Filter: Filter Current and Previous 2 Years Data
 -------------------------------------------------
@@ -16348,9 +16348,9 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >= add_months(date_trunc('YEAR',@Select(Report§\ Dashboard Specific Custom Objects\Last Load Date)),-24)
+Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >= add_months(date_trunc('YEAR',@Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date)),-24)
 AND 
-A_BUSINESS_PROCESS_DAY.DAY_DT <= @Select(Report§\ Dashboard Specific Custom Objects\Last Load Date)
+A_BUSINESS_PROCESS_DAY.DAY_DT <= @Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date)
         
 Filter: Filter Current and Previous 3 Year Data
 -------------------------------------------------
@@ -16363,9 +16363,9 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >= add_months(date_trunc('YEAR',@Select(Report§\ Dashboard Specific Custom Objects\Last Load Date) ),-36)
+Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >= add_months(date_trunc('YEAR',@Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date) ),-36)
 AND 
-A_BUSINESS_PROCESS_DAY.DAY_DT <= @Select(Report§\ Dashboard Specific Custom Objects\Last Load Date)
+A_BUSINESS_PROCESS_DAY.DAY_DT <= @Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date)
         
 Filter: Filter Current YTD and Previous Year Data
 -------------------------------------------------
@@ -16378,9 +16378,9 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >= add_months(date_trunc('YEAR',@Select(Report§\ Dashboard Specific Custom Objects\Last Load Date)),-12)
+Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >= add_months(date_trunc('YEAR',@Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date)),-12)
 AND 
-A_BUSINESS_PROCESS_DAY.DAY_DT <= @Select(Report§\ Dashboard Specific Custom Objects\As of Last Load Date)
+A_BUSINESS_PROCESS_DAY.DAY_DT <= @Select(Reportï¿½\ Dashboard Specific Custom Objects\As of Last Load Date)
         
 Filter: Filter Current YTD and Previous 2 Years Data
 -------------------------------------------------
@@ -16393,9 +16393,9 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >= add_months(date_trunc('YEAR',@Select(Report§\ Dashboard Specific Custom Objects\Last Load Date)),-24)
+Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >= add_months(date_trunc('YEAR',@Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date)),-24)
 AND 
-A_BUSINESS_PROCESS_DAY.DAY_DT <= @Select(Report§\ Dashboard Specific Custom Objects\As of Last Load Date)
+A_BUSINESS_PROCESS_DAY.DAY_DT <= @Select(Reportï¿½\ Dashboard Specific Custom Objects\As of Last Load Date)
         
 Filter: Filter Current YTD and Previous 3 Year Data
 -------------------------------------------------
@@ -16408,9 +16408,9 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >= add_months(date_trunc('YEAR',@Select(Report§\ Dashboard Specific Custom Objects\Last Load Date) ),-36)
+Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >= add_months(date_trunc('YEAR',@Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date) ),-36)
 AND 
-A_BUSINESS_PROCESS_DAY.DAY_DT <= @Select(Report§\ Dashboard Specific Custom Objects\As of Last Load Date)
+A_BUSINESS_PROCESS_DAY.DAY_DT <= @Select(Reportï¿½\ Dashboard Specific Custom Objects\As of Last Load Date)
         
 Filter: Filter Current Year To Previous Month Data
 -------------------------------------------------
@@ -16423,7 +16423,7 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >=date_trunc('YEAR',@Select(Report§\ Dashboard Specific Custom Objects\Last Load Date)) and A_BUSINESS_PROCESS_DAY.DAY_DT <=@Select(Report§\ Dashboard Specific Custom Objects\Last Load Date)
+Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT >=date_trunc('YEAR',@Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date)) and A_BUSINESS_PROCESS_DAY.DAY_DT <=@Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date)
         
 Filter: Filter Current Year-1 To Workforce Last Load Data
 -------------------------------------------------
@@ -16436,7 +16436,7 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT BETWEEN add_months(date_trunc('YEAR',@Select(Report§\ Dashboard Specific Custom Objects\Last Load Date)),-12) AND (date_trunc('YEAR',@Select(Report§\ Dashboard Specific Custom Objects\Last Load Date))-1)
+Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT BETWEEN add_months(date_trunc('YEAR',@Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date)),-12) AND (date_trunc('YEAR',@Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date))-1)
         
 Filter: Filter Current Year-2 To Workforce Last Load Data
 -------------------------------------------------
@@ -16449,7 +16449,7 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT BETWEEN add_months(date_trunc('YEAR',@Select(Report§\ Dashboard Specific Custom Objects\Last Load Date)),-24) AND add_months((date_trunc('YEAR',@Select(Report§\ Dashboard Specific Custom Objects\Last Load Date))-1),-12)
+Where expression : A_BUSINESS_PROCESS_DAY.DAY_DT BETWEEN add_months(date_trunc('YEAR',@Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date)),-24) AND add_months((date_trunc('YEAR',@Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date))-1),-12)
         
 Filter: Filter Rolling Week Data
 -------------------------------------------------
@@ -16462,7 +16462,7 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : abs(date(A_BUSINESS_PROCESS_DAY.DAY_DT) - @Select(Report§\ Dashboard Specific Custom Objects\Last Load Date)) <= 7
+Where expression : abs(date(A_BUSINESS_PROCESS_DAY.DAY_DT) - @Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date)) <= 7
         
 Filter: Filter Rolling 3 Months Data
 -------------------------------------------------
@@ -16475,7 +16475,7 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : abs(months_between(date(A_BUSINESS_PROCESS_DAY.DAY_DT), @Select(Report§\ Dashboard Specific Custom Objects\Last Load Date))) <=1
+Where expression : abs(months_between(date(A_BUSINESS_PROCESS_DAY.DAY_DT), @Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date))) <=1
         
 Filter: Filter Rolling Quarter Data
 -------------------------------------------------
@@ -16488,7 +16488,7 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : abs(months_between(date(A_BUSINESS_PROCESS_DAY.DAY_DT), @Select(Report§\ Dashboard Specific Custom Objects\Last Load Date))) <=3
+Where expression : abs(months_between(date(A_BUSINESS_PROCESS_DAY.DAY_DT), @Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date))) <=3
         
 Filter: Filter Rolling 13 Month Data
 -------------------------------------------------
@@ -16501,7 +16501,7 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : ABS(months_between(date(A_BUSINESS_PROCESS_DAY.DAY_DT),@Select(Report§\ Dashboard Specific Custom Objects\Last Load Date))) <=13
+Where expression : ABS(months_between(date(A_BUSINESS_PROCESS_DAY.DAY_DT),@Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date))) <=13
         
 Filter: Filter Data With Start Date and End Date
 -------------------------------------------------
@@ -16530,9 +16530,9 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : A_BUSINESS_PROCESS_DAY.MONTH_NUM>@Prompt('Select Year and Month ','N','Report§\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent)-100
+Where expression : A_BUSINESS_PROCESS_DAY.MONTH_NUM>@Prompt('Select Year and Month ','N','Reportï¿½\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent)-100
 AND 
-A_BUSINESS_PROCESS_DAY.MONTH_NUM<=@Prompt('Select Year and Month ','N','Report§\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent)
+A_BUSINESS_PROCESS_DAY.MONTH_NUM<=@Prompt('Select Year and Month ','N','Reportï¿½\ Dashboard Specific Custom Objects\Military Representation Report\Business Processed Month Number YYYYMM',Mono,Constrained,Persistent)
 
         
 Filter: Filter Cost Center L4 Name
@@ -16585,7 +16585,7 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : @Select(Report§\ Dashboard Specific Custom Objects\Last Load Date)  >= @Aggregate_Aware(A_CUR_ACTIVITY.valid_from_ts,A_ACTIVITY.valid_from_ts)  and @Select(Report§\ Dashboard Specific Custom Objects\Last Load Date)  < @Aggregate_Aware(A_CUR_ACTIVITY.valid_to_ts,A_ACTIVITY.valid_to_ts)
+Where expression : @Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date)  >= @Aggregate_Aware(A_CUR_ACTIVITY.valid_from_ts,A_ACTIVITY.valid_from_ts)  and @Select(Reportï¿½\ Dashboard Specific Custom Objects\Last Load Date)  < @Aggregate_Aware(A_CUR_ACTIVITY.valid_to_ts,A_ACTIVITY.valid_to_ts)
         
 Filter: Filter Exclude Deleted Activity Records
 -------------------------------------------------
@@ -16637,7 +16637,7 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : @Select(Worker\Worker Job\Worker Job\European Employee Indicator §(Y§\N§))='N'
+Where expression : @Select(Worker\Worker Job\Worker Job\European Employee Indicator ï¿½(Yï¿½\Nï¿½))='N'
         
 Filter: Filter Thirdparty Workers
 -------------------------------------------------
@@ -16703,7 +16703,7 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : @Select(Miscellaneous Dimensions\Aggregate Type §(Month or YTD§))='M'
+Where expression : @Select(Miscellaneous Dimensions\Aggregate Type ï¿½(Month or YTDï¿½))='M'
         
 Filter: Filter YTD Cumulative Data
 -------------------------------------------------
@@ -16716,7 +16716,7 @@ filterType : Native
 compulsory : false
 filterScope : Universe
 applyOnListOfValues : false
-Where expression : @Select(Miscellaneous Dimensions\Aggregate Type §(Month or YTD§))='Y'
+Where expression : @Select(Miscellaneous Dimensions\Aggregate Type ï¿½(Month or YTDï¿½))='Y'
         
 Measures and Attributes
 -------------------------------------------------
